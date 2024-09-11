@@ -1,0 +1,10 @@
+HloModule jit_pad, is_scheduled=true, entry_computation_layout={(f32[4,4096,5120]{2,1,0:T(8,128)}, f32[]{:T(128)})->f32[4,4099,5120]{2,0,1:T(4,128)}}, allow_spmd_sharding_propagation_to_parameters={true,true}, allow_spmd_sharding_propagation_to_output={true}
+
+ENTRY main.4 {
+  Arg_1.2 = f32[]{:T(128)} parameter(1), metadata={op_name="args[1]"}
+  Arg_0.1 = f32[4,4096,5120]{2,1,0:T(8,128)} parameter(0), metadata={op_name="args[0]"}
+  copy.1 = f32[]{:T(128)S(6)} copy(Arg_1.2)
+  copy = f32[4,4096,5120]{2,0,1:T(4,128)} copy(Arg_0.1), metadata={op_name="args[0]"}
+  ROOT pad.3 = f32[4,4099,5120]{2,0,1:T(4,128)} pad(copy, copy.1), padding=0_0x0_3x0_0, metadata={op_name="jit(pad)/jit(main)/pad[padding_config=((0, 0, 0), (0, 3, 0), (0, 0, 0))]" source_file="/tmp/ipykernel_2702310/2333499347.py" source_line=63}
+}
+

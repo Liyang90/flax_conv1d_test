@@ -1,0 +1,11 @@
+HloModule jit_add, entry_computation_layout={(f32[4,4099,5120]{2,0,1:T(4,128)}, f32[1,1,5120]{2,1,0:T(1,128)})->f32[4,4099,5120]{2,0,1:T(4,128)}}, allow_spmd_sharding_propagation_to_parameters={true,true}, allow_spmd_sharding_propagation_to_output={true}
+
+ENTRY main.7 {
+  Arg_0.1 = f32[4,4099,5120]{2,1,0} parameter(0)
+  Arg_1.2 = f32[1,1,5120]{2,1,0} parameter(1)
+  broadcast.3 = f32[1,1,5120]{2,1,0} broadcast(Arg_1.2), dimensions={0,1,2}, metadata={op_name="jit(add)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+  reshape.4 = f32[5120]{0} reshape(broadcast.3), metadata={op_name="jit(add)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+  broadcast.5 = f32[4,4099,5120]{2,1,0} broadcast(reshape.4), dimensions={2}, metadata={op_name="jit(add)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+  ROOT add.6 = f32[4,4099,5120]{2,1,0} add(Arg_0.1, broadcast.5), metadata={op_name="jit(add)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+} // main.7
+

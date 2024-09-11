@@ -1,0 +1,9 @@
+HloModule jit__mean, entry_computation_layout={(f32[]{:T(128)})->f32[4,4096,5120]{2,1,0:T(8,128)}}, allow_spmd_sharding_propagation_to_parameters={true}, allow_spmd_sharding_propagation_to_output={true}
+
+ENTRY main.5 {
+  Arg_0.1 = f32[] parameter(0)
+  constant.2 = f32[] constant(83886080)
+  divide.3 = f32[] divide(Arg_0.1, constant.2), metadata={op_name="jit(_mean)/jit(main)/div" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=10}
+  ROOT broadcast.4 = f32[4,4096,5120]{2,1,0} broadcast(divide.3), dimensions={}, metadata={op_name="jit(_mean)/jit(main)/broadcast_in_dim[shape=(4, 4096, 5120) broadcast_dimensions=()]" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=10}
+}
+

@@ -1,0 +1,16 @@
+HloModule jit_add, is_scheduled=true, entry_computation_layout={(f32[4,4099,5120]{2,0,1:T(4,128)}, f32[1,1,5120]{2,1,0:T(1,128)})->f32[4,4099,5120]{2,0,1:T(4,128)}}, allow_spmd_sharding_propagation_to_parameters={true,true}, allow_spmd_sharding_propagation_to_output={true}
+
+fused_computation {
+  param_0 = f32[4,4099,5120]{2,0,1:T(4,128)} parameter(0)
+  param_1.1 = f32[5120]{0:T(1024)} parameter(1)
+  broadcast.0 = f32[4,4099,5120]{2,0,1:T(4,128)} broadcast(param_1.1), dimensions={2}, metadata={op_name="jit(add)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+  ROOT add.0 = f32[4,4099,5120]{2,0,1:T(4,128)} add(param_0, broadcast.0), metadata={op_name="jit(add)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+}
+
+ENTRY main.7 {
+  Arg_1.2 = f32[1,1,5120]{2,1,0:T(1,128)} parameter(1), metadata={op_name="y"}
+  Arg_0.1 = f32[4,4099,5120]{2,0,1:T(4,128)} parameter(0), metadata={op_name="x"}
+  bitcast.1 = f32[5120]{0:T(1024)} bitcast(Arg_1.2)
+  ROOT fusion = f32[4,4099,5120]{2,0,1:T(4,128)} fusion(Arg_0.1, bitcast.1), kind=kLoop, calls=fused_computation, metadata={op_name="jit(add)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}, backend_config={"flag_configs":[],"window_config":{"kernel_window_bounds":[],"output_window_bounds":["205","1","5"],"input_window_bounds":[],"estimated_cycles":"672303","iteration_bounds":["20","1","8"]},"megacore_config":{"megacore_split_dim":"0"},"scoped_memory_configs":[],"used_scoped_memory_configs":[{"memory_space":"1","offset":"0","size":"8413184"}],"retry_config":{"retry_count":"0"}}
+}
+

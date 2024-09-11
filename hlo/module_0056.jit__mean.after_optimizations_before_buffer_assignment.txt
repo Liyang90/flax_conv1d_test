@@ -1,0 +1,16 @@
+HloModule jit__mean, is_scheduled=true, entry_computation_layout={(f32[4,4096,5120]{2,1,0:T(8,128)})->f32[]{:T(128)}}, allow_spmd_sharding_propagation_to_parameters={true}, allow_spmd_sharding_propagation_to_output={true}
+
+region_0.4 {
+  Arg_1.6 = f32[]{:T(128)} parameter(1), metadata={op_name="jit(_mean)/jit(main)/reduce_sum[axes=(0, 1, 2)]"}
+  Arg_0.5 = f32[]{:T(128)} parameter(0), metadata={op_name="jit(_mean)/jit(main)/reduce_sum[axes=(0, 1, 2)]"}
+  ROOT add.7 = f32[]{:T(128)} add(Arg_0.5, Arg_1.6), metadata={op_name="jit(_mean)/jit(main)/reduce_sum[axes=(0, 1, 2)]" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=10}
+}
+
+ENTRY main.10 {
+  constant = f32[]{:T(128)} constant(1.19209291e-08)
+  constant.3 = f32[]{:T(128)} constant(0)
+  Arg_0.1 = f32[4,4096,5120]{2,1,0:T(8,128)} parameter(0)
+  reduce.8 = f32[]{:T(128)} reduce(Arg_0.1, constant.3), dimensions={0,1,2}, to_apply=region_0.4, metadata={op_name="jit(_mean)/jit(main)/reduce_sum[axes=(0, 1, 2)]" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=10}
+  ROOT multiply = f32[]{:T(128)} multiply(reduce.8, constant), metadata={op_name="jit(_mean)/jit(main)/div" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=10}
+}
+

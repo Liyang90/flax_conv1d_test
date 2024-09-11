@@ -1,0 +1,10 @@
+HloModule jit_multiply, entry_computation_layout={(f32[]{:T(128)}, s32[]{:T(128)})->(f32[]{:T(128)}, f32[]{:T(128)})}, allow_spmd_sharding_propagation_to_parameters={true,true}, allow_spmd_sharding_propagation_to_output={true,true}
+
+ENTRY main.6 {
+  Arg_0.1 = f32[] parameter(0)
+  Arg_1.2 = s32[] parameter(1)
+  convert.3 = f32[] convert(Arg_1.2), metadata={op_name="jit(multiply)/jit(main)/convert_element_type[new_dtype=float32 weak_type=False sharding=None]" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=10}
+  multiply.4 = f32[] multiply(Arg_0.1, convert.3), metadata={op_name="jit(multiply)/jit(main)/mul" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=10}
+  ROOT tuple.5 = (f32[], f32[]) tuple(multiply.4, convert.3)
+}
+

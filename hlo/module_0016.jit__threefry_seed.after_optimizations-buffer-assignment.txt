@@ -34,7 +34,7 @@ Used values:
  uses:
   bitcast.1, operand 0
   fusion, operand 0
- from instruction: %convert.6 = u32[]{:T(128)} convert(s32[]{:T(128)S(6)} %copy), metadata={op_name="jit(_threefry_seed)/jit(main)/convert_element_type[new_dtype=uint32 weak_type=False sharding=None]" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=20}<9 constant.2 @0>
+ from instruction: %convert.6 = u32[]{:T(128)} convert(s32[]{:T(128)S(6)} %copy), metadata={op_name="jit(_threefry_seed)/jit(main)/convert_element_type[new_dtype=uint32 weak_type=False sharding=None]" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=20}<9 constant.2 @0>
  positions:
   constant.2
  uses:
@@ -44,18 +44,18 @@ Used values:
   shift-right-logical.3
  uses:
   convert.4, operand 0
- from instruction: %shift-right-logical.3 = s32[]{:T(128)S(6)} shift-right-logical(s32[]{:T(128)S(6)} %copy, s32[]{:T(128)} %constant.2), metadata={op_name="jit(_threefry_seed)/jit(main)/shift_right_logical" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=20}<11 convert.4 @0>
+ from instruction: %shift-right-logical.3 = s32[]{:T(128)S(6)} shift-right-logical(s32[]{:T(128)S(6)} %copy, s32[]{:T(128)} %constant.2), metadata={op_name="jit(_threefry_seed)/jit(main)/shift_right_logical" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=20}<11 convert.4 @0>
  positions:
   convert.4
   bitcast
  uses:
   bitcast, operand 0
   fusion, operand 1
- from instruction: %convert.4 = u32[]{:T(128)} convert(s32[]{:T(128)S(6)} %shift-right-logical.3), metadata={op_name="jit(_threefry_seed)/jit(main)/convert_element_type[new_dtype=uint32 weak_type=False sharding=None]" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=20}<12 fusion @0>
+ from instruction: %convert.4 = u32[]{:T(128)} convert(s32[]{:T(128)S(6)} %shift-right-logical.3), metadata={op_name="jit(_threefry_seed)/jit(main)/convert_element_type[new_dtype=uint32 weak_type=False sharding=None]" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=20}<12 fusion @0>
  positions:
   fusion
  uses:
- from instruction: %fusion = u32[2]{0:T(128)} fusion(u32[1]{0:T(128)} %bitcast.1, u32[1]{0:T(128)} %bitcast), kind=kLoop, calls=%fused_computation, metadata={op_name="jit(_threefry_seed)/jit(main)/concatenate[dimension=0]" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=20}
+ from instruction: %fusion = u32[2]{0:T(128)} fusion(u32[1]{0:T(128)} %bitcast.1, u32[1]{0:T(128)} %bitcast), kind=kLoop, calls=%fused_computation, metadata={op_name="jit(_threefry_seed)/jit(main)/concatenate[dimension=0]" source_file="/tmp/ipykernel_2702310/3404187330.py" source_line=20}
 
 HloLiveRange (max 9):
   InstructionSequence:

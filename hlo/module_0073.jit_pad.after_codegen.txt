@@ -1,0 +1,10 @@
+HloModule jit_pad, is_scheduled=true, entry_computation_layout={(f32[4,4096,5120]{2,1,0:T(8,128)}, f32[]{:T(128)})->f32[4,4099,5120]{2,0,1:T(4,128)}}, allow_spmd_sharding_propagation_to_parameters={true,true}, allow_spmd_sharding_propagation_to_output={true}
+
+ENTRY main.4 {
+  Arg_1.2 = f32[]{:T(128)} parameter(1), metadata={op_name="args[1]"}
+  Arg_0.1 = f32[4,4096,5120]{2,1,0:T(8,128)} parameter(0), metadata={op_name="args[0]"}
+  copy.1 = f32[]{:T(128)S(6)} copy(Arg_1.2)
+  copy = f32[4,4096,5120]{2,0,1:T(4,128)} copy(Arg_0.1), metadata={op_name="args[0]"}, backend_config={"flag_configs":[],"window_config":{"kernel_window_bounds":[],"output_window_bounds":["128","1","8"],"input_window_bounds":[],"estimated_cycles":"674000","iteration_bounds":["32","1","5"]},"megacore_config":{"megacore_split_dim":"0"},"scoped_memory_configs":[],"used_scoped_memory_configs":[{"memory_space":"1","offset":"0","size":"8388608"}],"retry_config":{"retry_count":"0"}}
+  ROOT pad.3 = f32[4,4099,5120]{2,0,1:T(4,128)} pad(copy, copy.1), padding=0_0x0_3x0_0, metadata={op_name="jit(pad)/jit(main)/pad[padding_config=((0, 0, 0), (0, 3, 0), (0, 0, 0))]" source_file="/tmp/ipykernel_2702310/2333499347.py" source_line=63}, backend_config={"flag_configs":[],"window_config":{"kernel_window_bounds":[],"output_window_bounds":["13","1","10"],"input_window_bounds":[],"estimated_cycles":"1866511","iteration_bounds":["316","1","4"]},"megacore_config":{"megacore_split_dim":"0"},"scoped_memory_configs":[],"used_scoped_memory_configs":[{"memory_space":"1","offset":"0","size":"1064960"}],"retry_config":{"retry_count":"0"}}
+}
+

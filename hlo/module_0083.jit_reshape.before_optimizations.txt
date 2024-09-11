@@ -1,0 +1,7 @@
+HloModule jit_reshape, entry_computation_layout={(f32[1,1,5120]{2,1,0:T(1,128)})->f32[5120]{0:T(1024)}}, allow_spmd_sharding_propagation_to_parameters={true}, allow_spmd_sharding_propagation_to_output={true}
+
+ENTRY main.3 {
+  Arg_0.1 = f32[1,1,5120]{2,1,0} parameter(0), metadata={op_name="args[0]"}
+  ROOT reshape.2 = f32[5120]{0} reshape(Arg_0.1), metadata={op_name="jit(reshape)/jit(main)/reshape[new_sizes=(5120,) dimensions=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=688}
+}
+

@@ -1,0 +1,6 @@
+HloModule jit_convert_element_type, entry_computation_layout={(f32[4,1,5120]{2,1,0:T(1,128)})->f32[4,1,5120]{2,1,0:T(1,128)}}, allow_spmd_sharding_propagation_to_parameters={true}, allow_spmd_sharding_propagation_to_output={true}
+
+ENTRY main.2 {
+  ROOT Arg_0.1 = f32[4,1,5120]{2,1,0} parameter(0), metadata={op_name="args[0]"}
+}
+

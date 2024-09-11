@@ -1,0 +1,17 @@
+HloModule jit_add, is_scheduled=true, entry_computation_layout={(f32[4,4099,5120]{2,0,1:T(4,128)})->(f32[4,4099,5120]{2,0,1:T(4,128)}, f32[1,1,5120]{2,1,0:T(1,128)})}, allow_spmd_sharding_propagation_to_parameters={true}, allow_spmd_sharding_propagation_to_output={true,true}
+
+region_0.3 {
+  Arg_1.5 = f32[]{:T(128)} parameter(1), metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]"}
+  Arg_0.4 = f32[]{:T(128)} parameter(0), metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]"}
+  ROOT add.6 = f32[]{:T(128)} add(Arg_0.4, Arg_1.5), metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+}
+
+ENTRY main.10 {
+  constant.2 = f32[]{:T(128)} constant(0)
+  Arg_0.1 = f32[4,4099,5120]{2,0,1:T(4,128)} parameter(0)
+  reduce.7 = f32[5120]{0:T(1024)} reduce(Arg_0.1, constant.2), dimensions={0,1}, to_apply=region_0.3, metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}, backend_config={"flag_configs":[],"window_config":{"kernel_window_bounds":[],"output_window_bounds":["26","1","5"],"input_window_bounds":[],"estimated_cycles":"1612368","iteration_bounds":["158","1","8"]},"megacore_config":{"megacore_split_dim":"0","megacore_allreduce_bytes":"20480"},"scoped_memory_configs":[],"used_scoped_memory_configs":[{"memory_space":"1","offset":"0","size":"552960"}],"retry_config":{"retry_count":"0"}}
+  copy.1 = f32[4,4099,5120]{2,0,1:T(4,128)} copy(Arg_0.1), backend_config={"flag_configs":[],"window_config":{"kernel_window_bounds":[],"output_window_bounds":["205","1","5"],"input_window_bounds":[],"estimated_cycles":"672042","iteration_bounds":["20","1","8"]},"megacore_config":{"megacore_split_dim":"0"},"scoped_memory_configs":[],"used_scoped_memory_configs":[{"memory_space":"1","offset":"0","size":"8396800"}],"retry_config":{"retry_count":"0"}}
+  bitcast.1 = f32[1,1,5120]{2,1,0:T(1,128)} bitcast(reduce.7)
+  ROOT tuple.1 = (f32[4,4099,5120]{2,0,1:T(4,128)}, f32[1,1,5120]{2,1,0:T(1,128)}) tuple(copy.1, bitcast.1)
+} // main.10
+

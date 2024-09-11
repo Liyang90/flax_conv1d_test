@@ -1,0 +1,16 @@
+HloModule jit_add, entry_computation_layout={(f32[4,4099,5120]{2,0,1:T(4,128)})->(f32[4,4099,5120]{2,0,1:T(4,128)}, f32[1,1,5120]{2,1,0:T(1,128)})}, allow_spmd_sharding_propagation_to_parameters={true}, allow_spmd_sharding_propagation_to_output={true,true}
+
+region_0.3 {
+  Arg_0.4 = f32[] parameter(0), metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]"}
+  Arg_1.5 = f32[] parameter(1), metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]"}
+  ROOT add.6 = f32[] add(Arg_0.4, Arg_1.5), metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+}
+
+ENTRY main.10 {
+  Arg_0.1 = f32[4,4099,5120]{2,1,0} parameter(0)
+  constant.2 = f32[] constant(0)
+  reduce.7 = f32[5120]{0} reduce(Arg_0.1, constant.2), dimensions={0,1}, to_apply=region_0.3, metadata={op_name="jit(add)/jit(main)/reduce_sum[axes=(0, 1)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+  reshape.8 = f32[1,1,5120]{2,1,0} reshape(reduce.7), metadata={op_name="jit(add)/jit(main)/reshape[new_sizes=(1, 1, 5120) dimensions=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}
+  ROOT tuple.9 = (f32[4,4099,5120]{2,1,0}, f32[1,1,5120]{2,1,0}) tuple(Arg_0.1, reshape.8)
+}
+

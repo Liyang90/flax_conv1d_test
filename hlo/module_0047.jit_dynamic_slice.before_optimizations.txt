@@ -5,6 +5,6 @@ ENTRY main.6 {
   Arg_1.2 = s32[] parameter(1), metadata={op_name="args[1]"}
   Arg_2.3 = s32[] parameter(2), metadata={op_name="args[2]"}
   Arg_3.4 = s32[] parameter(3), metadata={op_name="args[3]"}
-  ROOT dynamic-slice.5 = f32[4,4096,5120]{2,1,0} dynamic-slice(Arg_0.1, Arg_1.2, Arg_2.3, Arg_3.4), dynamic_slice_sizes={4,4096,5120}, metadata={op_name="jit(dynamic_slice)/jit(main)/dynamic_slice[slice_sizes=(4, 4096, 5120)]" source_file="/tmp/ipykernel_2694218/2333499347.py" source_line=63}
+  ROOT dynamic-slice.5 = f32[4,4096,5120]{2,1,0} dynamic-slice(Arg_0.1, Arg_1.2, Arg_2.3, Arg_3.4), dynamic_slice_sizes={4,4096,5120}, metadata={op_name="jit(dynamic_slice)/jit(main)/dynamic_slice[slice_sizes=(4, 4096, 5120)]" source_file="/tmp/ipykernel_2702310/2333499347.py" source_line=63}
 }
 
