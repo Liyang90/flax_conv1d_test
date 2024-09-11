@@ -1,0 +1,358 @@
+BufferAssignment:
+allocation 0: size 512, thread-local:
+ value: <9 add.27 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 1: size 335544320, maybe-live-out:
+ value: <60 reshape.3 @0> (size=170393600,offset=0): bf16[4,8,513,5120]{3,2,1,0:T(8,128)(2,1)}
+ value: <76 fusion.15{1} @0> (size=335544320,offset=0): f32[4,4096,5120]{2,1,0:T(8,128)}
+allocation 2: size 335544320, parameter 2, shape |f32[4,4096,5120]| at ShapeIndex {}:
+ value: <57 Arg_2.3 @0> (size=335544320,offset=0): f32[4,4096,5120]{2,1,0:T(8,128)}
+allocation 3: size 81920, maybe-live-out:
+ value: <84 fusion.11 @0> (size=81920,offset=0): f32[4,1,5120]{2,1,0:T(1,128)}
+allocation 4: size 81920, parameter 1, shape |f32[4,1,5120]| at ShapeIndex {}:
+ value: <53 Arg_1.2 @0> (size=81920,offset=0): f32[4,1,5120]{2,1,0:T(1,128)}
+allocation 5: size 66560, constant:
+ value: <67 constant.13 @0> (size=66560,offset=0): pred[32,513]{0,1:T(8,128)(4,1)}
+allocation 6: size 20480, maybe-live-out:
+ value: <80 fusion.14 @0> (size=20480,offset=0): f32[5120]{0:T(1024)}
+allocation 7: size 20480, parameter 0, shape |f32[5120]| at ShapeIndex {}:
+ value: <63 Arg_0.1 @0> (size=20480,offset=0): f32[5120]{0:T(1024)}
+allocation 8: size 20480, constant:
+ value: <79 constant.5 @0> (size=20480,offset=0): f32[4099]{0:T(1024)}
+allocation 9: size 512, maybe-live-out:
+ value: <75 fusion.15{0} @0> (size=512,offset=0): f32[]{:T(128)}
+ value: <78 multiply.22 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 10: size 512, constant:
+ value: <58 constant.26 @0> (size=512,offset=0): bf16[]{:T(256)}
+allocation 11: size 512, constant:
+ value: <77 constant.3 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 12: size 32, output shape is |(f32[], f32[4,4096,5120], f32[5120], f32[4,1,5120])|, maybe-live-out:
+ value: <85 tuple.30{} @0> (size=32,offset=0): (f32[]{:T(128)}, f32[4,4096,5120]{2,1,0:T(8,128)}, f32[5120]{0:T(1024)}, f32[4,1,5120]{2,1,0:T(1,128)})
+allocation 13: size 512, thread-local:
+ value: <8 Arg_1.26 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 14: size 512, thread-local:
+ value: <7 Arg_0.25 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 15: size 512, thread-local:
+ value: <12 add.19 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 16: size 512, thread-local:
+ value: <11 Arg_1.18 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 17: size 512, thread-local:
+ value: <10 Arg_0.17 @0> (size=512,offset=0): f32[]{:T(128)}
+allocation 18: size 677052448, preallocated-temp:
+ value: <54 copy-start{} @0> (size=32,offset=677052416): (f32[4,1,5120]{2,1,0:T(1,128)S(1)}, f32[4,1,5120]{2,1,0:T(1,128)}, u32[]{:S(2)})
+ value: <59 pad @0> (size=168099840,offset=0): bf16[4,4104,5120]{2,1,0:T(8,128)(2,1)}
+ value: <61 slice.3 @0> (size=1146880,offset=170393600): bf16[4,7,3,5120]{3,2,1,0:T(4,128)(2,1)}
+ value: <62 fusion @0> (size=170393600,offset=0): bf16[4,8,516,5120]{3,2,1,0:T(8,128)(2,1)}
+ value: <64 copy-start.2{} @0> (size=32,offset=677036032): (f32[5120]{0:T(1024)S(1)}, f32[5120]{0:T(1024)}, u32[]{:S(2)})
+ value: <68 copy-start.1{} @0> (size=32,offset=677019648): (pred[32,513]{0,1:T(8,128)(4,1)S(1)}, pred[32,513]{0,1:T(8,128)(4,1)}, u32[]{:S(2)})
+ value: <71 fusion.8 @0> (size=336199680,offset=340787200): f32[32,513,5120]{2,0,1:T(8,128)}
+ value: <72 copy.4 @0> (size=340787200,offset=0): f32[32,513,5120]{2,1,0:T(8,128)}
+ value: <73 reshape.7 @0> (size=336199680,offset=340787200): f32[4,4104,5120]{2,1,0:T(8,128)}
+ value: <74 fusion.15{} @0> (size=32,offset=677003264): (f32[]{:T(128)}, f32[4,4096,5120]{2,1,0:T(8,128)})
+ value: <81 copy-start.3{} @0> (size=32,offset=676986880): (f32[4099]{0:T(1024)S(1)}, f32[4099]{0:T(1024)}, u32[]{:S(2)})
+allocation 19: size 12, color 2, preallocated-temp:
+ value: <56 copy-start{2} @2> (size=4,offset=0): u32[]{:S(2)}
+ value: <66 copy-start.2{2} @2> (size=4,offset=4): u32[]{:S(2)}
+ value: <70 copy-start.1{2} @2> (size=4,offset=8): u32[]{:S(2)}
+ value: <83 copy-start.3{2} @2> (size=4,offset=0): u32[]{:S(2)}
+allocation 20: size 172032, color 1, preallocated-temp:
+ value: <55 copy-start{0} @1> (size=81920,offset=0): f32[4,1,5120]{2,1,0:T(1,128)S(1)}
+ value: <65 copy-start.2{0} @1> (size=20480,offset=151552): f32[5120]{0:T(1024)S(1)}
+ value: <69 copy-start.1{0} @1> (size=66560,offset=81920): pred[32,513]{0,1:T(8,128)(4,1)S(1)}
+ value: <82 copy-start.3{0} @1> (size=20480,offset=81920): f32[4099]{0:T(1024)S(1)}
+
+Total bytes used: 1348609612 (1.26GiB)
+
+Used values:
+<7 Arg_0.25 @0>
+ positions:
+  Arg_0.25
+ uses:
+  add.27, operand 0
+ from instruction: %Arg_0.25 = f32[]{:T(128)} parameter(0), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/transpose(jvp(BlockJAX_1))/conv1d/reduce_sum[axes=(0, 1)]"}<8 Arg_1.26 @0>
+ positions:
+  Arg_1.26
+ uses:
+  add.27, operand 1
+ from instruction: %Arg_1.26 = f32[]{:T(128)} parameter(1), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/transpose(jvp(BlockJAX_1))/conv1d/reduce_sum[axes=(0, 1)]"}<9 add.27 @0>
+ positions:
+  add.27
+ uses:
+ from instruction: %add.27 = f32[]{:T(128)} add(f32[]{:T(128)} %Arg_0.25, f32[]{:T(128)} %Arg_1.26), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/transpose(jvp(BlockJAX_1))/conv1d/reduce_sum[axes=(0, 1)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}<10 Arg_0.17 @0>
+ positions:
+  Arg_0.17
+ uses:
+  add.19, operand 0
+ from instruction: %Arg_0.17 = f32[]{:T(128)} parameter(0), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/reduce_sum[axes=(0, 1, 2)]"}<11 Arg_1.18 @0>
+ positions:
+  Arg_1.18
+ uses:
+  add.19, operand 1
+ from instruction: %Arg_1.18 = f32[]{:T(128)} parameter(1), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/reduce_sum[axes=(0, 1, 2)]"}<12 add.19 @0>
+ positions:
+  add.19
+ uses:
+ from instruction: %add.19 = f32[]{:T(128)} add(f32[]{:T(128)} %Arg_0.17, f32[]{:T(128)} %Arg_1.18), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/reduce_sum[axes=(0, 1, 2)]" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=10}<53 Arg_1.2 @0>
+ positions:
+  Arg_1.2
+  copy-start {1}
+ uses:
+  copy-start, operand 0
+  copy-done, operand 0 {1}
+ from instruction: %Arg_1.2 = f32[4,1,5120]{2,1,0:T(1,128)} parameter(1), metadata={op_name="params[\'params\'][\'conv1d\'][\'kernel\']"}<54 copy-start{} @0>
+ positions:
+  copy-start {}
+ uses:
+  copy-done, operand 0 {}
+ from instruction: %copy-start = (f32[4,1,5120]{2,1,0:T(1,128)S(1)}, f32[4,1,5120]{2,1,0:T(1,128)}, u32[]{:S(2)}) copy-start(f32[4,1,5120]{2,1,0:T(1,128)} %Arg_1.2), cross_program_prefetch_index=0<55 copy-start{0} @1>
+ positions:
+  copy-start {0}
+  copy-done
+ uses:
+  copy-done, operand 0 {0}
+  fusion.8, operand 0
+ from instruction: %copy-start = (f32[4,1,5120]{2,1,0:T(1,128)S(1)}, f32[4,1,5120]{2,1,0:T(1,128)}, u32[]{:S(2)}) copy-start(f32[4,1,5120]{2,1,0:T(1,128)} %Arg_1.2), cross_program_prefetch_index=0<56 copy-start{2} @2>
+ positions:
+  copy-start {2}
+ uses:
+  copy-done, operand 0 {2}
+ from instruction: %copy-start = (f32[4,1,5120]{2,1,0:T(1,128)S(1)}, f32[4,1,5120]{2,1,0:T(1,128)}, u32[]{:S(2)}) copy-start(f32[4,1,5120]{2,1,0:T(1,128)} %Arg_1.2), cross_program_prefetch_index=0<57 Arg_2.3 @0>
+ positions:
+  Arg_2.3
+ uses:
+  pad, operand 0
+  fusion.11, operand 0
+ from instruction: %Arg_2.3 = f32[4,4096,5120]{2,1,0:T(8,128)} parameter(2), metadata={op_name="input"}<58 constant.26 @0>
+ positions:
+  constant.26
+ uses:
+  pad, operand 1
+ from instruction: %constant.26 = bf16[]{:T(256)} constant(0)<59 pad @0>
+ positions:
+  pad
+ uses:
+  reshape.3, operand 0
+ from instruction: %pad = bf16[4,4104,5120]{2,1,0:T(8,128)(2,1)} pad(f32[4,4096,5120]{2,1,0:T(8,128)} %Arg_2.3, bf16[]{:T(256)} %constant.26), padding=0_0x3_5x0_0, metadata={op_name="input"}<60 reshape.3 @0>
+ positions:
+  reshape.3
+ uses:
+  slice.3, operand 0
+  fusion, operand 1
+ from instruction: %reshape.3 = bf16[4,8,513,5120]{3,2,1,0:T(8,128)(2,1)} reshape(bf16[4,4104,5120]{2,1,0:T(8,128)(2,1)} %pad), metadata={op_name="input"}<61 slice.3 @0>
+ positions:
+  slice.3
+ uses:
+  fusion, operand 0
+ from instruction: %slice.3 = bf16[4,7,3,5120]{3,2,1,0:T(4,128)(2,1)} slice(bf16[4,8,513,5120]{3,2,1,0:T(8,128)(2,1)} %reshape.3), slice={[0:4], [1:8], [0:3], [0:5120]}, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/jvp(BlockJAX_1)/conv1d/conv_general_dilated[window_strides=(1,) padding=((3, 3),) lhs_dilation=(1,) rhs_dilation=(1,) dimension_numbers=ConvDimensionNumbers(lhs_spec=(0, 2, 1), rhs_spec=(2, 1, 0), out_spec=(0, 2, 1)) feature_group_count=5120 batch_group_count=1 precision=None preferred_element_type=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=663}<62 fusion @0>
+ positions:
+  fusion
+ uses:
+  fusion.8, operand 1
+ from instruction: %fusion = bf16[4,8,516,5120]{3,2,1,0:T(8,128)(2,1)} fusion(bf16[4,7,3,5120]{3,2,1,0:T(4,128)(2,1)} %slice.3, bf16[4,8,513,5120]{3,2,1,0:T(8,128)(2,1)} %reshape.3), kind=kLoop, calls=%fused_computation, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/jvp(BlockJAX_1)/conv1d/conv_general_dilated[window_strides=(1,) padding=((3, 3),) lhs_dilation=(1,) rhs_dilation=(1,) dimension_numbers=ConvDimensionNumbers(lhs_spec=(0, 2, 1), rhs_spec=(2, 1, 0), out_spec=(0, 2, 1)) feature_group_count=5120 batch_group_count=1 precision=None preferred_element_type=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=663}<63 Arg_0.1 @0>
+ positions:
+  Arg_0.1
+  copy-start.2 {1}
+ uses:
+  copy-start.2, operand 0
+  copy-done.2, operand 0 {1}
+ from instruction: %Arg_0.1 = f32[5120]{0:T(1024)} parameter(0), metadata={op_name="params[\'params\'][\'conv1d\'][\'bias\']"}<64 copy-start.2{} @0>
+ positions:
+  copy-start.2 {}
+ uses:
+  copy-done.2, operand 0 {}
+ from instruction: %copy-start.2 = (f32[5120]{0:T(1024)S(1)}, f32[5120]{0:T(1024)}, u32[]{:S(2)}) copy-start(f32[5120]{0:T(1024)} %Arg_0.1)<65 copy-start.2{0} @1>
+ positions:
+  copy-start.2 {0}
+  copy-done.2
+ uses:
+  copy-done.2, operand 0 {0}
+  fusion.8, operand 2
+ from instruction: %copy-start.2 = (f32[5120]{0:T(1024)S(1)}, f32[5120]{0:T(1024)}, u32[]{:S(2)}) copy-start(f32[5120]{0:T(1024)} %Arg_0.1)<66 copy-start.2{2} @2>
+ positions:
+  copy-start.2 {2}
+ uses:
+  copy-done.2, operand 0 {2}
+ from instruction: %copy-start.2 = (f32[5120]{0:T(1024)S(1)}, f32[5120]{0:T(1024)}, u32[]{:S(2)}) copy-start(f32[5120]{0:T(1024)} %Arg_0.1)<67 constant.13 @0>
+ positions:
+  constant.13
+  copy-start.1 {1}
+ uses:
+  copy-start.1, operand 0
+  copy-done.1, operand 0 {1}
+ from instruction: %constant.13 = pred[32,513]{0,1:T(8,128)(4,1)} constant({...}), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/jvp(BlockJAX_1)/conv1d/conv_general_dilated[window_strides=(1,) padding=((3, 3),) lhs_dilation=(1,) rhs_dilation=(1,) dimension_numbers=ConvDimensionNumbers(lhs_spec=(0, 2, 1), rhs_spec=(2, 1, 0), out_spec=(0, 2, 1)) feature_group_count=5120 batch_group_count=1 precision=None preferred_element_type=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=663}<68 copy-start.1{} @0>
+ positions:
+  copy-start.1 {}
+ uses:
+  copy-done.1, operand 0 {}
+ from instruction: %copy-start.1 = (pred[32,513]{0,1:T(8,128)(4,1)S(1)}, pred[32,513]{0,1:T(8,128)(4,1)}, u32[]{:S(2)}) copy-start(pred[32,513]{0,1:T(8,128)(4,1)} %constant.13)<69 copy-start.1{0} @1>
+ positions:
+  copy-start.1 {0}
+  copy-done.1
+ uses:
+  copy-done.1, operand 0 {0}
+  fusion.8, operand 3
+ from instruction: %copy-start.1 = (pred[32,513]{0,1:T(8,128)(4,1)S(1)}, pred[32,513]{0,1:T(8,128)(4,1)}, u32[]{:S(2)}) copy-start(pred[32,513]{0,1:T(8,128)(4,1)} %constant.13)<70 copy-start.1{2} @2>
+ positions:
+  copy-start.1 {2}
+ uses:
+  copy-done.1, operand 0 {2}
+ from instruction: %copy-start.1 = (pred[32,513]{0,1:T(8,128)(4,1)S(1)}, pred[32,513]{0,1:T(8,128)(4,1)}, u32[]{:S(2)}) copy-start(pred[32,513]{0,1:T(8,128)(4,1)} %constant.13)<71 fusion.8 @0>
+ positions:
+  fusion.8
+ uses:
+  copy.4, operand 0
+ from instruction: %fusion.8 = f32[32,513,5120]{2,0,1:T(8,128)} fusion(f32[4,1,5120]{2,1,0:T(1,128)S(1)} %copy-done, bf16[4,8,516,5120]{3,2,1,0:T(8,128)(2,1)} %fusion, f32[5120]{0:T(1024)S(1)} %copy-done.2, pred[32,513]{0,1:T(8,128)(4,1)S(1)} %copy-done.1), kind=kOutput, calls=%fused_computation.6, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/jvp(BlockJAX_1)/conv1d/conv_general_dilated[window_strides=(1,) padding=((3, 3),) lhs_dilation=(1,) rhs_dilation=(1,) dimension_numbers=ConvDimensionNumbers(lhs_spec=(0, 2, 1), rhs_spec=(2, 1, 0), out_spec=(0, 2, 1)) feature_group_count=5120 batch_group_count=1 precision=None preferred_element_type=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=663}<72 copy.4 @0>
+ positions:
+  copy.4
+ uses:
+  reshape.7, operand 0
+ from instruction: %copy.4 = f32[32,513,5120]{2,1,0:T(8,128)} copy(f32[32,513,5120]{2,0,1:T(8,128)} %fusion.8), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/jvp(BlockJAX_1)/conv1d/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}<73 reshape.7 @0>
+ positions:
+  reshape.7
+ uses:
+  fusion.15, operand 0
+ from instruction: %reshape.7 = f32[4,4104,5120]{2,1,0:T(8,128)} reshape(f32[32,513,5120]{2,1,0:T(8,128)} %copy.4), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/jvp(BlockJAX_1)/conv1d/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}<74 fusion.15{} @0>
+ positions:
+  fusion.15 {}
+ uses:
+  get-tuple-element, operand 0 {}
+  get-tuple-element.1, operand 0 {}
+ from instruction: %fusion.15 = (f32[]{:T(128)}, f32[4,4096,5120]{2,1,0:T(8,128)}) fusion(f32[4,4104,5120]{2,1,0:T(8,128)} %reshape.7), kind=kLoop, calls=%fused_computation.11, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/reduce_sum[axes=(0, 1, 2)]" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=10}<75 fusion.15{0} @0>
+ positions:
+  fusion.15 {0}
+  get-tuple-element
+ uses:
+  multiply.22, operand 0
+ from instruction: %fusion.15 = (f32[]{:T(128)}, f32[4,4096,5120]{2,1,0:T(8,128)}) fusion(f32[4,4104,5120]{2,1,0:T(8,128)} %reshape.7), kind=kLoop, calls=%fused_computation.11, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/reduce_sum[axes=(0, 1, 2)]" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=10}<76 fusion.15{1} @0>
+ positions:
+  fusion.15 {1}
+  tuple.30 {1}
+  get-tuple-element.1
+ uses:
+  tuple.30, operand 1
+ from instruction: %fusion.15 = (f32[]{:T(128)}, f32[4,4096,5120]{2,1,0:T(8,128)}) fusion(f32[4,4104,5120]{2,1,0:T(8,128)} %reshape.7), kind=kLoop, calls=%fused_computation.11, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/reduce_sum[axes=(0, 1, 2)]" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=10}<77 constant.3 @0>
+ positions:
+  constant.3
+ uses:
+  multiply.22, operand 1
+ from instruction: %constant.3 = f32[]{:T(128)} constant(6.10351562e-05)<78 multiply.22 @0>
+ positions:
+  multiply.22
+  tuple.30 {0}
+ uses:
+  tuple.30, operand 0
+ from instruction: %multiply.22 = f32[]{:T(128)} multiply(f32[]{:T(128)} %get-tuple-element, f32[]{:T(128)} %constant.3), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/mul" source_file="/tmp/ipykernel_2694218/456449586.py" source_line=10}<79 constant.5 @0>
+ positions:
+  constant.5
+  copy-start.3 {1}
+ uses:
+  fusion.14, operand 0
+  copy-start.3, operand 0
+  copy-done.3, operand 0 {1}
+ from instruction: %constant.5 = f32[4099]{0:T(1024)} constant({...}), metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/transpose(jvp(BlockJAX_1))/pad[padding_config=((0, 0, 0), (0, 3, 0), (0, 0, 0))]" source_file="/tmp/ipykernel_2694218/2333499347.py" source_line=63}<80 fusion.14 @0>
+ positions:
+  fusion.14
+  tuple.30 {2}
+ uses:
+  tuple.30, operand 2
+ from instruction: %fusion.14 = f32[5120]{0:T(1024)} fusion(f32[4099]{0:T(1024)} %constant.5), kind=kLoop, calls=%fused_computation.10, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/transpose(jvp(BlockJAX_1))/conv1d/reduce_sum[axes=(0, 1)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=689}<81 copy-start.3{} @0>
+ positions:
+  copy-start.3 {}
+ uses:
+  copy-done.3, operand 0 {}
+ from instruction: %copy-start.3 = (f32[4099]{0:T(1024)S(1)}, f32[4099]{0:T(1024)}, u32[]{:S(2)}) copy-start(f32[4099]{0:T(1024)} %constant.5)<82 copy-start.3{0} @1>
+ positions:
+  copy-start.3 {0}
+  copy-done.3
+ uses:
+  copy-done.3, operand 0 {0}
+  fusion.11, operand 1
+ from instruction: %copy-start.3 = (f32[4099]{0:T(1024)S(1)}, f32[4099]{0:T(1024)}, u32[]{:S(2)}) copy-start(f32[4099]{0:T(1024)} %constant.5)<83 copy-start.3{2} @2>
+ positions:
+  copy-start.3 {2}
+ uses:
+  copy-done.3, operand 0 {2}
+ from instruction: %copy-start.3 = (f32[4099]{0:T(1024)S(1)}, f32[4099]{0:T(1024)}, u32[]{:S(2)}) copy-start(f32[4099]{0:T(1024)} %constant.5)<84 fusion.11 @0>
+ positions:
+  fusion.11
+  tuple.30 {3}
+ uses:
+  tuple.30, operand 3
+ from instruction: %fusion.11 = f32[4,1,5120]{2,1,0:T(1,128)} fusion(f32[4,4096,5120]{2,1,0:T(8,128)} %Arg_2.3, f32[4099]{0:T(1024)S(1)} %copy-done.3), kind=kOutput, calls=%fused_computation.7, metadata={op_name="jit(<unnamed wrapped function>)/jit(main)/transpose(jvp(BlockJAX_1))/conv1d/conv_general_dilated[window_strides=(1,) padding=((3, 3),) lhs_dilation=(1,) rhs_dilation=(1,) dimension_numbers=ConvDimensionNumbers(lhs_spec=(2, 0, 1), rhs_spec=(2, 0, 1), out_spec=(1, 2, 0)) feature_group_count=1 batch_group_count=5120 precision=None preferred_element_type=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=663}<85 tuple.30{} @0>
+ positions:
+  tuple.30 {}
+ uses:
+ from instruction: %tuple.30 = (f32[]{:T(128)}, f32[4,4096,5120]{2,1,0:T(8,128)}, f32[5120]{0:T(1024)}, f32[4,1,5120]{2,1,0:T(1,128)}) tuple(f32[]{:T(128)} %multiply.22, f32[4,4096,5120]{2,1,0:T(8,128)} %get-tuple-element.1, f32[5120]{0:T(1024)} %fusion.14, f32[4,1,5120]{2,1,0:T(1,128)} %fusion.11)
+
+HloLiveRange (max 29):
+  InstructionSequence:
+    0:Arg_1.2
+    1:copy-start
+    2:constant.26
+    3:constant.13
+    4:constant.3
+    5:constant.5
+    6:Arg_2.3
+    7:Arg_0.1
+    8:pad
+    9:reshape.3
+    10:slice.3
+    11:copy-start.1
+    12:copy-start.2
+    13:fusion
+    14:copy-done
+    15:copy-done.1
+    16:copy-done.2
+    17:fusion.8
+    18:copy.4
+    19:reshape.7
+    20:copy-start.3
+    21:fusion.15
+    22:get-tuple-element
+    23:multiply.22
+    24:get-tuple-element.1
+    25:copy-done.3
+    26:fusion.11
+    27:fusion.14
+    28:tuple.30
+  BufferLiveRange:
+    Arg_1.2{}:0-29
+    copy-start{}:1-14
+    copy-start{0}:1-17
+    copy-start{2}:1-14
+    Arg_2.3{}:0-29
+    constant.26{}:2-8
+    pad{}:8-9
+    reshape.3{}:9-13
+    slice.3{}:10-13
+    fusion{}:13-17
+    Arg_0.1{}:0-29
+    copy-start.2{}:12-16
+    copy-start.2{0}:12-17
+    copy-start.2{2}:12-16
+    constant.13{}:3-15
+    copy-start.1{}:11-15
+    copy-start.1{0}:11-17
+    copy-start.1{2}:11-15
+    fusion.8{}:17-18
+    copy.4{}:18-19
+    reshape.7{}:19-21
+    fusion.15{}:21-24
+    fusion.15{0}:21-23
+    fusion.15{1}:21-29
+    constant.3{}:4-23
+    multiply.22{}:23-29
+    constant.5{}:5-27
+    fusion.14{}:27-29
+    copy-start.3{}:20-25
+    copy-start.3{0}:20-26
+    copy-start.3{2}:20-25
+    fusion.11{}:26-29
+    tuple.30{}:28-29
+  Live ranges at 19 (peak):
+    Arg_1.2: 81920 bytes
+    Arg_2.3: 335544320 bytes
+    Arg_0.1: 20480 bytes
+    copy.4: 336199680 bytes
+    reshape.7: 336199680 bytes
+    constant.3: 4 bytes
+    constant.5: 16396 bytes

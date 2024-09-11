@@ -1,0 +1,8 @@
+HloModule jit_conv_general_dilated, entry_computation_layout={(f32[4,4096,5120]{2,1,0:T(8,128)}, f32[4,1,5120]{2,1,0:T(1,128)})->f32[4,4099,5120]{2,0,1:T(4,128)}}, allow_spmd_sharding_propagation_to_parameters={true,true}, allow_spmd_sharding_propagation_to_output={true}
+
+ENTRY main.4 {
+  Arg_0.1 = f32[4,4096,5120]{2,1,0} parameter(0), metadata={op_name="args[0]"}
+  Arg_1.2 = f32[4,1,5120]{2,1,0} parameter(1), metadata={op_name="args[1]"}
+  ROOT convolution.3 = f32[4,4099,5120]{2,1,0} convolution(Arg_0.1, Arg_1.2), window={size=4 pad=3_3}, dim_labels=b0f_0io->b0f, feature_group_count=5120, metadata={op_name="jit(conv_general_dilated)/jit(main)/conv_general_dilated[window_strides=(1,) padding=((3, 3),) lhs_dilation=(1,) rhs_dilation=(1,) dimension_numbers=ConvDimensionNumbers(lhs_spec=(0, 2, 1), rhs_spec=(2, 1, 0), out_spec=(0, 2, 1)) feature_group_count=5120 batch_group_count=1 precision=None preferred_element_type=None]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/linen/linear.py" source_line=663}
+}
+

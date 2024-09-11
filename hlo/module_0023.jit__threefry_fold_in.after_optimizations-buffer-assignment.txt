@@ -1,0 +1,1319 @@
+BufferAssignment:
+allocation 0: size 512, constant:
+ value: <150 constant.3 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 1: size 512, output shape is |u32[2]|, maybe-live-out:
+ value: <11 copy @0> (size=512,offset=0): u32[]{:T(128)}
+ value: <153 fusion @0> (size=512,offset=0): u32[2]{0:T(128)}
+allocation 2: size 512, parameter 1, shape |u32[]| at ShapeIndex {}:
+ value: <10 Arg_1.2 @0> (size=512,offset=0): u32[]{:T(128)}
+allocation 3: size 512, constant:
+ value: <12 constant.19 @0> (size=512,offset=0): u32[]{:T(128)}
+allocation 4: size 512, parameter 0, shape |u32[2]| at ShapeIndex {}:
+ value: <14 Arg_0.1 @0> (size=512,offset=0): u32[2]{0:T(128)}
+allocation 5: size 512, constant:
+ value: <21 constant.17 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 6: size 512, constant:
+ value: <23 constant.16 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 7: size 512, constant:
+ value: <28 constant.15 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 8: size 512, constant:
+ value: <30 constant.14 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 9: size 512, constant:
+ value: <35 constant.13 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 10: size 512, constant:
+ value: <37 constant.12 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 11: size 512, constant:
+ value: <48 constant @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 12: size 512, constant:
+ value: <51 constant.11 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 13: size 512, constant:
+ value: <59 constant.10 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 14: size 512, constant:
+ value: <61 constant.9 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 15: size 512, constant:
+ value: <66 constant.8 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 16: size 512, constant:
+ value: <73 constant.7 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 17: size 512, constant:
+ value: <75 constant.6 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 18: size 512, constant:
+ value: <80 constant.5 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 19: size 512, constant:
+ value: <127 constant.4 @0> (size=512,offset=0): u32[1]{0:T(128)}
+allocation 20: size 0, color 1, preallocated-temp:
+allocation 21: size 49664, preallocated-temp:
+ value: <13 shift-right-logical.20 @0> (size=512,offset=16384): u32[]{:T(128)}
+ value: <15 fusion.1{} @0> (size=32,offset=0): (u32[1]{0:T(128)}, u32[1]{0:T(128)})
+ value: <16 fusion.1{0} @0> (size=512,offset=32768): u32[1]{0:T(128)}
+ value: <17 fusion.1{1} @0> (size=512,offset=49152): u32[1]{0:T(128)}
+allocation 22: size 2560, color 6, preallocated-temp:
+ value: <18 add.29 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <19 add.30 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <20 add.31 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <22 shift-left.32 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <24 shift-right-logical.33 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <25 or.34 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <26 xor.35 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <27 add.36 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <29 shift-left.37 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <31 shift-right-logical.38 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <32 or.39 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <33 xor.40 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <34 add.41 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <36 shift-left.42 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <38 shift-right-logical.43 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <39 or.44 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <40 xor.45 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <41 add.46 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <42 add.51 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <43 shift-left.47 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <44 shift-right-logical.48 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <45 or.49 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <46 xor.50 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <47 xor.0 @6> (size=512,offset=2048): u32[1]{0:T(128)S(6)}
+ value: <49 xor.1 @6> (size=512,offset=2048): u32[1]{0:T(128)S(6)}
+ value: <50 add.53 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <52 add.54 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <53 add.55 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <54 shift-left.56 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <55 shift-right-logical.57 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <56 or.58 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <57 xor.59 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <58 add.60 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <60 shift-left.61 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <62 shift-right-logical.62 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <63 or.63 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <64 xor.64 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <65 add.65 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <67 shift-left.66 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <68 shift-right-logical.67 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <69 or.68 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <70 xor.69 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <71 add.70 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <72 add.76 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <74 shift-left.71 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <76 shift-right-logical.72 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <77 or.73 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <78 xor.74 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <79 add.77 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <81 add.78 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <82 add.79 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <83 shift-left.80 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <84 shift-right-logical.81 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <85 or.82 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <86 xor.83 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <87 add.84 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <88 shift-left.85 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <89 shift-right-logical.86 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <90 or.87 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <91 xor.88 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <92 add.89 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <93 shift-left.90 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <94 shift-right-logical.91 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <95 or.92 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <96 xor.93 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <97 add.94 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <98 add.99 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <99 shift-left.95 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <100 shift-right-logical.96 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <101 or.97 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <102 xor.98 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <103 add.100 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <104 add.101 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <105 add.102 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <106 shift-left.103 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <107 shift-right-logical.104 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <108 or.105 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <109 xor.106 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <110 add.107 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <111 shift-left.108 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <112 shift-right-logical.109 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <113 or.110 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <114 xor.111 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <115 add.112 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <116 shift-left.113 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <117 shift-right-logical.114 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <118 or.115 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <119 xor.116 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <120 add.117 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <121 add.122 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <122 shift-left.118 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <123 shift-right-logical.119 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <124 or.120 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <125 xor.121 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <126 add.124 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <128 add.125 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <129 add.126 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <130 shift-left.127 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <131 shift-right-logical.128 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <132 or.129 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <133 xor.130 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <134 add.131 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <135 shift-left.132 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <136 shift-right-logical.133 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <137 or.134 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <138 xor.135 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <139 add.136 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <140 shift-left.137 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <141 shift-right-logical.138 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <142 or.139 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <143 xor.140 @6> (size=512,offset=1536): u32[1]{0:T(128)S(6)}
+ value: <144 add.141 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+ value: <145 shift-left.142 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <146 shift-right-logical.143 @6> (size=512,offset=512): u32[1]{0:T(128)S(6)}
+ value: <147 or.144 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <148 xor.145 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <149 add.148 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <151 add.149 @6> (size=512,offset=1024): u32[1]{0:T(128)S(6)}
+ value: <152 add.147 @6> (size=512,offset=0): u32[1]{0:T(128)S(6)}
+
+Total bytes used: 62464 (61.0KiB)
+
+Used values:
+<10 Arg_1.2 @0>
+ positions:
+  Arg_1.2
+ uses:
+  copy, operand 0
+ from instruction: %Arg_1.2 = u32[]{:T(128)} parameter(1), metadata={op_name="data"}<11 copy @0>
+ positions:
+  copy
+  bitcast.2
+ uses:
+  shift-right-logical.20, operand 0
+  bitcast.2, operand 0
+  add.30, operand 0
+ from instruction: %copy = u32[]{:T(128)} copy(u32[]{:T(128)} %Arg_1.2)<12 constant.19 @0>
+ positions:
+  constant.19
+ uses:
+  shift-right-logical.20, operand 1
+ from instruction: %constant.19 = u32[]{:T(128)} constant(32)<13 shift-right-logical.20 @0>
+ positions:
+  shift-right-logical.20
+  bitcast
+ uses:
+  bitcast, operand 0
+  add.29, operand 0
+ from instruction: %shift-right-logical.20 = u32[]{:T(128)} shift-right-logical(u32[]{:T(128)} %copy, u32[]{:T(128)} %constant.19), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<14 Arg_0.1 @0>
+ positions:
+  Arg_0.1
+ uses:
+  fusion.1, operand 0
+ from instruction: %Arg_0.1 = u32[2]{0:T(128)} parameter(0), metadata={op_name="key"}<15 fusion.1{} @0>
+ positions:
+  fusion.1 {}
+ uses:
+  get-tuple-element, operand 0 {}
+  get-tuple-element.1, operand 0 {}
+ from instruction: %fusion.1 = (u32[1]{0:T(128)}, u32[1]{0:T(128)}) fusion(u32[2]{0:T(128)} %Arg_0.1), kind=kLoop, calls=%fused_computation.1, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(1,) limit_indices=(2,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<16 fusion.1{0} @0>
+ positions:
+  fusion.1 {0}
+  get-tuple-element
+ uses:
+  add.30, operand 1
+  add.51, operand 1
+  xor.0, operand 1
+  add.100, operand 1
+  add.122, operand 1
+ from instruction: %fusion.1 = (u32[1]{0:T(128)}, u32[1]{0:T(128)}) fusion(u32[2]{0:T(128)} %Arg_0.1), kind=kLoop, calls=%fused_computation.1, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(1,) limit_indices=(2,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<17 fusion.1{1} @0>
+ positions:
+  fusion.1 {1}
+  get-tuple-element.1
+ uses:
+  add.29, operand 1
+  xor.0, operand 0
+  add.77, operand 1
+  add.99, operand 1
+  add.148, operand 1
+ from instruction: %fusion.1 = (u32[1]{0:T(128)}, u32[1]{0:T(128)}) fusion(u32[2]{0:T(128)} %Arg_0.1), kind=kLoop, calls=%fused_computation.1, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(1,) limit_indices=(2,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<18 add.29 @6>
+ positions:
+  add.29
+ uses:
+  add.31, operand 0
+ from instruction: %add.29 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)} %bitcast, u32[1]{0:T(128)} %get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<19 add.30 @6>
+ positions:
+  add.30
+ uses:
+  add.31, operand 1
+  shift-left.32, operand 0
+  shift-right-logical.33, operand 0
+ from instruction: %add.30 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)} %bitcast.2, u32[1]{0:T(128)} %get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<20 add.31 @6>
+ positions:
+  add.31
+ uses:
+  xor.35, operand 0
+  add.36, operand 0
+ from instruction: %add.31 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.29, u32[1]{0:T(128)S(6)} %add.30), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<21 constant.17 @0>
+ positions:
+  constant.17
+ uses:
+  shift-left.32, operand 1
+  shift-left.80, operand 1
+  shift-left.127, operand 1
+ from instruction: %constant.17 = u32[1]{0:T(128)} constant({13})<22 shift-left.32 @6>
+ positions:
+  shift-left.32
+ uses:
+  or.34, operand 0
+ from instruction: %shift-left.32 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %add.30, u32[1]{0:T(128)} %constant.17), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<23 constant.16 @0>
+ positions:
+  constant.16
+ uses:
+  shift-right-logical.33, operand 1
+  shift-right-logical.81, operand 1
+  shift-right-logical.128, operand 1
+ from instruction: %constant.16 = u32[1]{0:T(128)} constant({19})<24 shift-right-logical.33 @6>
+ positions:
+  shift-right-logical.33
+ uses:
+  or.34, operand 1
+ from instruction: %shift-right-logical.33 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %add.30, u32[1]{0:T(128)} %constant.16), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<25 or.34 @6>
+ positions:
+  or.34
+ uses:
+  xor.35, operand 1
+ from instruction: %or.34 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.32, u32[1]{0:T(128)S(6)} %shift-right-logical.33), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<26 xor.35 @6>
+ positions:
+  xor.35
+ uses:
+  add.36, operand 1
+  shift-left.37, operand 0
+  shift-right-logical.38, operand 0
+ from instruction: %xor.35 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.31, u32[1]{0:T(128)S(6)} %or.34), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<27 add.36 @6>
+ positions:
+  add.36
+ uses:
+  xor.40, operand 0
+  add.41, operand 0
+ from instruction: %add.36 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.31, u32[1]{0:T(128)S(6)} %xor.35), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<28 constant.15 @0>
+ positions:
+  constant.15
+ uses:
+  shift-left.37, operand 1
+  shift-right-logical.57, operand 1
+  shift-left.85, operand 1
+  shift-right-logical.104, operand 1
+  shift-left.132, operand 1
+ from instruction: %constant.15 = u32[1]{0:T(128)} constant({15})<29 shift-left.37 @6>
+ positions:
+  shift-left.37
+ uses:
+  or.39, operand 0
+ from instruction: %shift-left.37 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.35, u32[1]{0:T(128)} %constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<30 constant.14 @0>
+ positions:
+  constant.14
+ uses:
+  shift-right-logical.38, operand 1
+  shift-left.56, operand 1
+  shift-right-logical.86, operand 1
+  shift-left.103, operand 1
+  shift-right-logical.133, operand 1
+ from instruction: %constant.14 = u32[1]{0:T(128)} constant({17})<31 shift-right-logical.38 @6>
+ positions:
+  shift-right-logical.38
+ uses:
+  or.39, operand 1
+ from instruction: %shift-right-logical.38 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.35, u32[1]{0:T(128)} %constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<32 or.39 @6>
+ positions:
+  or.39
+ uses:
+  xor.40, operand 1
+ from instruction: %or.39 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.37, u32[1]{0:T(128)S(6)} %shift-right-logical.38), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<33 xor.40 @6>
+ positions:
+  xor.40
+ uses:
+  add.41, operand 1
+  shift-left.42, operand 0
+  shift-right-logical.43, operand 0
+ from instruction: %xor.40 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.36, u32[1]{0:T(128)S(6)} %or.39), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<34 add.41 @6>
+ positions:
+  add.41
+ uses:
+  xor.45, operand 0
+  add.46, operand 0
+ from instruction: %add.41 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.36, u32[1]{0:T(128)S(6)} %xor.40), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<35 constant.13 @0>
+ positions:
+  constant.13
+ uses:
+  shift-left.42, operand 1
+  shift-right-logical.48, operand 1
+  shift-left.90, operand 1
+  shift-right-logical.96, operand 1
+  shift-left.137, operand 1
+  shift-right-logical.143, operand 1
+ from instruction: %constant.13 = u32[1]{0:T(128)} constant({26})<36 shift-left.42 @6>
+ positions:
+  shift-left.42
+ uses:
+  or.44, operand 0
+ from instruction: %shift-left.42 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.40, u32[1]{0:T(128)} %constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<37 constant.12 @0>
+ positions:
+  constant.12
+ uses:
+  shift-right-logical.43, operand 1
+  shift-left.47, operand 1
+  shift-right-logical.91, operand 1
+  shift-left.95, operand 1
+  shift-right-logical.138, operand 1
+  shift-left.142, operand 1
+ from instruction: %constant.12 = u32[1]{0:T(128)} constant({6})<38 shift-right-logical.43 @6>
+ positions:
+  shift-right-logical.43
+ uses:
+  or.44, operand 1
+ from instruction: %shift-right-logical.43 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.40, u32[1]{0:T(128)} %constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<39 or.44 @6>
+ positions:
+  or.44
+ uses:
+  xor.45, operand 1
+ from instruction: %or.44 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.42, u32[1]{0:T(128)S(6)} %shift-right-logical.43), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<40 xor.45 @6>
+ positions:
+  xor.45
+ uses:
+  add.46, operand 1
+  shift-left.47, operand 0
+  shift-right-logical.48, operand 0
+ from instruction: %xor.45 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.41, u32[1]{0:T(128)S(6)} %or.44), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<41 add.46 @6>
+ positions:
+  add.46
+ uses:
+  add.51, operand 0
+  xor.50, operand 0
+ from instruction: %add.46 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.41, u32[1]{0:T(128)S(6)} %xor.45), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<42 add.51 @6>
+ positions:
+  add.51
+ uses:
+  add.55, operand 0
+ from instruction: %add.51 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.46, u32[1]{0:T(128)} %get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<43 shift-left.47 @6>
+ positions:
+  shift-left.47
+ uses:
+  or.49, operand 0
+ from instruction: %shift-left.47 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.45, u32[1]{0:T(128)} %constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<44 shift-right-logical.48 @6>
+ positions:
+  shift-right-logical.48
+ uses:
+  or.49, operand 1
+ from instruction: %shift-right-logical.48 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.45, u32[1]{0:T(128)} %constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<45 or.49 @6>
+ positions:
+  or.49
+ uses:
+  xor.50, operand 1
+ from instruction: %or.49 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.47, u32[1]{0:T(128)S(6)} %shift-right-logical.48), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<46 xor.50 @6>
+ positions:
+  xor.50
+ uses:
+  add.53, operand 0
+ from instruction: %xor.50 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.46, u32[1]{0:T(128)S(6)} %or.49), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<47 xor.0 @6>
+ positions:
+  xor.0
+ uses:
+  xor.1, operand 0
+ from instruction: %xor.0 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)} %get-tuple-element.1, u32[1]{0:T(128)} %get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<48 constant @0>
+ positions:
+  constant
+ uses:
+  xor.1, operand 1
+ from instruction: %constant = u32[1]{0:T(128)} constant({466688986})<49 xor.1 @6>
+ positions:
+  xor.1
+ uses:
+  add.147, operand 1
+  add.53, operand 1
+  add.76, operand 1
+  add.124, operand 1
+ from instruction: %xor.1 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %xor.0, u32[1]{0:T(128)} %constant), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<50 add.53 @6>
+ positions:
+  add.53
+ uses:
+  add.54, operand 0
+ from instruction: %add.53 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %xor.50, u32[1]{0:T(128)S(6)} %xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<51 constant.11 @0>
+ positions:
+  constant.11
+ uses:
+  add.54, operand 1
+ from instruction: %constant.11 = u32[1]{0:T(128)} constant({1})<52 add.54 @6>
+ positions:
+  add.54
+ uses:
+  add.55, operand 1
+  shift-left.56, operand 0
+  shift-right-logical.57, operand 0
+ from instruction: %add.54 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.53, u32[1]{0:T(128)} %constant.11), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<53 add.55 @6>
+ positions:
+  add.55
+ uses:
+  xor.59, operand 0
+  add.60, operand 0
+ from instruction: %add.55 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.51, u32[1]{0:T(128)S(6)} %add.54), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<54 shift-left.56 @6>
+ positions:
+  shift-left.56
+ uses:
+  or.58, operand 0
+ from instruction: %shift-left.56 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %add.54, u32[1]{0:T(128)} %constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<55 shift-right-logical.57 @6>
+ positions:
+  shift-right-logical.57
+ uses:
+  or.58, operand 1
+ from instruction: %shift-right-logical.57 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %add.54, u32[1]{0:T(128)} %constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<56 or.58 @6>
+ positions:
+  or.58
+ uses:
+  xor.59, operand 1
+ from instruction: %or.58 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.56, u32[1]{0:T(128)S(6)} %shift-right-logical.57), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<57 xor.59 @6>
+ positions:
+  xor.59
+ uses:
+  add.60, operand 1
+  shift-left.61, operand 0
+  shift-right-logical.62, operand 0
+ from instruction: %xor.59 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.55, u32[1]{0:T(128)S(6)} %or.58), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<58 add.60 @6>
+ positions:
+  add.60
+ uses:
+  xor.64, operand 0
+  add.65, operand 0
+ from instruction: %add.60 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.55, u32[1]{0:T(128)S(6)} %xor.59), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<59 constant.10 @0>
+ positions:
+  constant.10
+ uses:
+  shift-left.61, operand 1
+  shift-left.108, operand 1
+ from instruction: %constant.10 = u32[1]{0:T(128)} constant({29})<60 shift-left.61 @6>
+ positions:
+  shift-left.61
+ uses:
+  or.63, operand 0
+ from instruction: %shift-left.61 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.59, u32[1]{0:T(128)} %constant.10), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<61 constant.9 @0>
+ positions:
+  constant.9
+ uses:
+  shift-right-logical.62, operand 1
+  add.101, operand 1
+  shift-right-logical.109, operand 1
+ from instruction: %constant.9 = u32[1]{0:T(128)} constant({3})<62 shift-right-logical.62 @6>
+ positions:
+  shift-right-logical.62
+ uses:
+  or.63, operand 1
+ from instruction: %shift-right-logical.62 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.59, u32[1]{0:T(128)} %constant.9), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<63 or.63 @6>
+ positions:
+  or.63
+ uses:
+  xor.64, operand 1
+ from instruction: %or.63 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.61, u32[1]{0:T(128)S(6)} %shift-right-logical.62), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<64 xor.64 @6>
+ positions:
+  xor.64
+ uses:
+  add.65, operand 1
+  shift-left.66, operand 0
+  shift-right-logical.67, operand 0
+ from instruction: %xor.64 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.60, u32[1]{0:T(128)S(6)} %or.63), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<65 add.65 @6>
+ positions:
+  add.65
+ uses:
+  xor.69, operand 0
+  add.70, operand 0
+ from instruction: %add.65 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.60, u32[1]{0:T(128)S(6)} %xor.64), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<66 constant.8 @0>
+ positions:
+  constant.8
+ uses:
+  shift-left.66, operand 1
+  shift-right-logical.67, operand 1
+  shift-left.113, operand 1
+  shift-right-logical.114, operand 1
+ from instruction: %constant.8 = u32[1]{0:T(128)} constant({16})<67 shift-left.66 @6>
+ positions:
+  shift-left.66
+ uses:
+  or.68, operand 0
+ from instruction: %shift-left.66 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.64, u32[1]{0:T(128)} %constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<68 shift-right-logical.67 @6>
+ positions:
+  shift-right-logical.67
+ uses:
+  or.68, operand 1
+ from instruction: %shift-right-logical.67 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.64, u32[1]{0:T(128)} %constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<69 or.68 @6>
+ positions:
+  or.68
+ uses:
+  xor.69, operand 1
+ from instruction: %or.68 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.66, u32[1]{0:T(128)S(6)} %shift-right-logical.67), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<70 xor.69 @6>
+ positions:
+  xor.69
+ uses:
+  add.70, operand 1
+  shift-left.71, operand 0
+  shift-right-logical.72, operand 0
+ from instruction: %xor.69 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.65, u32[1]{0:T(128)S(6)} %or.68), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<71 add.70 @6>
+ positions:
+  add.70
+ uses:
+  add.76, operand 0
+  xor.74, operand 0
+ from instruction: %add.70 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.65, u32[1]{0:T(128)S(6)} %xor.69), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<72 add.76 @6>
+ positions:
+  add.76
+ uses:
+  add.79, operand 0
+ from instruction: %add.76 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.70, u32[1]{0:T(128)S(6)} %xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<73 constant.7 @0>
+ positions:
+  constant.7
+ uses:
+  shift-left.71, operand 1
+  shift-left.118, operand 1
+ from instruction: %constant.7 = u32[1]{0:T(128)} constant({24})<74 shift-left.71 @6>
+ positions:
+  shift-left.71
+ uses:
+  or.73, operand 0
+ from instruction: %shift-left.71 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.69, u32[1]{0:T(128)} %constant.7), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<75 constant.6 @0>
+ positions:
+  constant.6
+ uses:
+  shift-right-logical.72, operand 1
+  shift-right-logical.119, operand 1
+ from instruction: %constant.6 = u32[1]{0:T(128)} constant({8})<76 shift-right-logical.72 @6>
+ positions:
+  shift-right-logical.72
+ uses:
+  or.73, operand 1
+ from instruction: %shift-right-logical.72 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.69, u32[1]{0:T(128)} %constant.6), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<77 or.73 @6>
+ positions:
+  or.73
+ uses:
+  xor.74, operand 1
+ from instruction: %or.73 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.71, u32[1]{0:T(128)S(6)} %shift-right-logical.72), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<78 xor.74 @6>
+ positions:
+  xor.74
+ uses:
+  add.77, operand 0
+ from instruction: %xor.74 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.70, u32[1]{0:T(128)S(6)} %or.73), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<79 add.77 @6>
+ positions:
+  add.77
+ uses:
+  add.78, operand 0
+ from instruction: %add.77 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %xor.74, u32[1]{0:T(128)} %get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<80 constant.5 @0>
+ positions:
+  constant.5
+ uses:
+  add.78, operand 1
+ from instruction: %constant.5 = u32[1]{0:T(128)} constant({2})<81 add.78 @6>
+ positions:
+  add.78
+ uses:
+  add.79, operand 1
+  shift-left.80, operand 0
+  shift-right-logical.81, operand 0
+ from instruction: %add.78 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.77, u32[1]{0:T(128)} %constant.5), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<82 add.79 @6>
+ positions:
+  add.79
+ uses:
+  xor.83, operand 0
+  add.84, operand 0
+ from instruction: %add.79 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.76, u32[1]{0:T(128)S(6)} %add.78), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<83 shift-left.80 @6>
+ positions:
+  shift-left.80
+ uses:
+  or.82, operand 0
+ from instruction: %shift-left.80 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %add.78, u32[1]{0:T(128)} %constant.17), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<84 shift-right-logical.81 @6>
+ positions:
+  shift-right-logical.81
+ uses:
+  or.82, operand 1
+ from instruction: %shift-right-logical.81 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %add.78, u32[1]{0:T(128)} %constant.16), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<85 or.82 @6>
+ positions:
+  or.82
+ uses:
+  xor.83, operand 1
+ from instruction: %or.82 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.80, u32[1]{0:T(128)S(6)} %shift-right-logical.81), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<86 xor.83 @6>
+ positions:
+  xor.83
+ uses:
+  add.84, operand 1
+  shift-left.85, operand 0
+  shift-right-logical.86, operand 0
+ from instruction: %xor.83 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.79, u32[1]{0:T(128)S(6)} %or.82), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<87 add.84 @6>
+ positions:
+  add.84
+ uses:
+  xor.88, operand 0
+  add.89, operand 0
+ from instruction: %add.84 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.79, u32[1]{0:T(128)S(6)} %xor.83), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<88 shift-left.85 @6>
+ positions:
+  shift-left.85
+ uses:
+  or.87, operand 0
+ from instruction: %shift-left.85 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.83, u32[1]{0:T(128)} %constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<89 shift-right-logical.86 @6>
+ positions:
+  shift-right-logical.86
+ uses:
+  or.87, operand 1
+ from instruction: %shift-right-logical.86 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.83, u32[1]{0:T(128)} %constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<90 or.87 @6>
+ positions:
+  or.87
+ uses:
+  xor.88, operand 1
+ from instruction: %or.87 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.85, u32[1]{0:T(128)S(6)} %shift-right-logical.86), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<91 xor.88 @6>
+ positions:
+  xor.88
+ uses:
+  add.89, operand 1
+  shift-left.90, operand 0
+  shift-right-logical.91, operand 0
+ from instruction: %xor.88 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.84, u32[1]{0:T(128)S(6)} %or.87), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<92 add.89 @6>
+ positions:
+  add.89
+ uses:
+  xor.93, operand 0
+  add.94, operand 0
+ from instruction: %add.89 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.84, u32[1]{0:T(128)S(6)} %xor.88), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<93 shift-left.90 @6>
+ positions:
+  shift-left.90
+ uses:
+  or.92, operand 0
+ from instruction: %shift-left.90 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.88, u32[1]{0:T(128)} %constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<94 shift-right-logical.91 @6>
+ positions:
+  shift-right-logical.91
+ uses:
+  or.92, operand 1
+ from instruction: %shift-right-logical.91 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.88, u32[1]{0:T(128)} %constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<95 or.92 @6>
+ positions:
+  or.92
+ uses:
+  xor.93, operand 1
+ from instruction: %or.92 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.90, u32[1]{0:T(128)S(6)} %shift-right-logical.91), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<96 xor.93 @6>
+ positions:
+  xor.93
+ uses:
+  add.94, operand 1
+  shift-left.95, operand 0
+  shift-right-logical.96, operand 0
+ from instruction: %xor.93 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.89, u32[1]{0:T(128)S(6)} %or.92), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<97 add.94 @6>
+ positions:
+  add.94
+ uses:
+  add.99, operand 0
+  xor.98, operand 0
+ from instruction: %add.94 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.89, u32[1]{0:T(128)S(6)} %xor.93), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<98 add.99 @6>
+ positions:
+  add.99
+ uses:
+  add.102, operand 0
+ from instruction: %add.99 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.94, u32[1]{0:T(128)} %get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<99 shift-left.95 @6>
+ positions:
+  shift-left.95
+ uses:
+  or.97, operand 0
+ from instruction: %shift-left.95 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.93, u32[1]{0:T(128)} %constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<100 shift-right-logical.96 @6>
+ positions:
+  shift-right-logical.96
+ uses:
+  or.97, operand 1
+ from instruction: %shift-right-logical.96 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.93, u32[1]{0:T(128)} %constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<101 or.97 @6>
+ positions:
+  or.97
+ uses:
+  xor.98, operand 1
+ from instruction: %or.97 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.95, u32[1]{0:T(128)S(6)} %shift-right-logical.96), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<102 xor.98 @6>
+ positions:
+  xor.98
+ uses:
+  add.100, operand 0
+ from instruction: %xor.98 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.94, u32[1]{0:T(128)S(6)} %or.97), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<103 add.100 @6>
+ positions:
+  add.100
+ uses:
+  add.101, operand 0
+ from instruction: %add.100 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %xor.98, u32[1]{0:T(128)} %get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<104 add.101 @6>
+ positions:
+  add.101
+ uses:
+  add.102, operand 1
+  shift-left.103, operand 0
+  shift-right-logical.104, operand 0
+ from instruction: %add.101 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.100, u32[1]{0:T(128)} %constant.9), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<105 add.102 @6>
+ positions:
+  add.102
+ uses:
+  xor.106, operand 0
+  add.107, operand 0
+ from instruction: %add.102 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.99, u32[1]{0:T(128)S(6)} %add.101), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<106 shift-left.103 @6>
+ positions:
+  shift-left.103
+ uses:
+  or.105, operand 0
+ from instruction: %shift-left.103 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %add.101, u32[1]{0:T(128)} %constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<107 shift-right-logical.104 @6>
+ positions:
+  shift-right-logical.104
+ uses:
+  or.105, operand 1
+ from instruction: %shift-right-logical.104 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %add.101, u32[1]{0:T(128)} %constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<108 or.105 @6>
+ positions:
+  or.105
+ uses:
+  xor.106, operand 1
+ from instruction: %or.105 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.103, u32[1]{0:T(128)S(6)} %shift-right-logical.104), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<109 xor.106 @6>
+ positions:
+  xor.106
+ uses:
+  add.107, operand 1
+  shift-left.108, operand 0
+  shift-right-logical.109, operand 0
+ from instruction: %xor.106 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.102, u32[1]{0:T(128)S(6)} %or.105), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<110 add.107 @6>
+ positions:
+  add.107
+ uses:
+  xor.111, operand 0
+  add.112, operand 0
+ from instruction: %add.107 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.102, u32[1]{0:T(128)S(6)} %xor.106), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<111 shift-left.108 @6>
+ positions:
+  shift-left.108
+ uses:
+  or.110, operand 0
+ from instruction: %shift-left.108 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.106, u32[1]{0:T(128)} %constant.10), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<112 shift-right-logical.109 @6>
+ positions:
+  shift-right-logical.109
+ uses:
+  or.110, operand 1
+ from instruction: %shift-right-logical.109 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.106, u32[1]{0:T(128)} %constant.9), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<113 or.110 @6>
+ positions:
+  or.110
+ uses:
+  xor.111, operand 1
+ from instruction: %or.110 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.108, u32[1]{0:T(128)S(6)} %shift-right-logical.109), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<114 xor.111 @6>
+ positions:
+  xor.111
+ uses:
+  add.112, operand 1
+  shift-left.113, operand 0
+  shift-right-logical.114, operand 0
+ from instruction: %xor.111 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.107, u32[1]{0:T(128)S(6)} %or.110), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<115 add.112 @6>
+ positions:
+  add.112
+ uses:
+  xor.116, operand 0
+  add.117, operand 0
+ from instruction: %add.112 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.107, u32[1]{0:T(128)S(6)} %xor.111), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<116 shift-left.113 @6>
+ positions:
+  shift-left.113
+ uses:
+  or.115, operand 0
+ from instruction: %shift-left.113 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.111, u32[1]{0:T(128)} %constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<117 shift-right-logical.114 @6>
+ positions:
+  shift-right-logical.114
+ uses:
+  or.115, operand 1
+ from instruction: %shift-right-logical.114 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.111, u32[1]{0:T(128)} %constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<118 or.115 @6>
+ positions:
+  or.115
+ uses:
+  xor.116, operand 1
+ from instruction: %or.115 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.113, u32[1]{0:T(128)S(6)} %shift-right-logical.114), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<119 xor.116 @6>
+ positions:
+  xor.116
+ uses:
+  add.117, operand 1
+  shift-left.118, operand 0
+  shift-right-logical.119, operand 0
+ from instruction: %xor.116 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.112, u32[1]{0:T(128)S(6)} %or.115), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<120 add.117 @6>
+ positions:
+  add.117
+ uses:
+  add.122, operand 0
+  xor.121, operand 0
+ from instruction: %add.117 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.112, u32[1]{0:T(128)S(6)} %xor.116), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<121 add.122 @6>
+ positions:
+  add.122
+ uses:
+  add.126, operand 0
+ from instruction: %add.122 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.117, u32[1]{0:T(128)} %get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<122 shift-left.118 @6>
+ positions:
+  shift-left.118
+ uses:
+  or.120, operand 0
+ from instruction: %shift-left.118 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.116, u32[1]{0:T(128)} %constant.7), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<123 shift-right-logical.119 @6>
+ positions:
+  shift-right-logical.119
+ uses:
+  or.120, operand 1
+ from instruction: %shift-right-logical.119 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.116, u32[1]{0:T(128)} %constant.6), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<124 or.120 @6>
+ positions:
+  or.120
+ uses:
+  xor.121, operand 1
+ from instruction: %or.120 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.118, u32[1]{0:T(128)S(6)} %shift-right-logical.119), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<125 xor.121 @6>
+ positions:
+  xor.121
+ uses:
+  add.124, operand 0
+ from instruction: %xor.121 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.117, u32[1]{0:T(128)S(6)} %or.120), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<126 add.124 @6>
+ positions:
+  add.124
+ uses:
+  add.125, operand 0
+ from instruction: %add.124 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %xor.121, u32[1]{0:T(128)S(6)} %xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<127 constant.4 @0>
+ positions:
+  constant.4
+ uses:
+  add.125, operand 1
+ from instruction: %constant.4 = u32[1]{0:T(128)} constant({4})<128 add.125 @6>
+ positions:
+  add.125
+ uses:
+  add.126, operand 1
+  shift-left.127, operand 0
+  shift-right-logical.128, operand 0
+ from instruction: %add.125 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.124, u32[1]{0:T(128)} %constant.4), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<129 add.126 @6>
+ positions:
+  add.126
+ uses:
+  xor.130, operand 0
+  add.131, operand 0
+ from instruction: %add.126 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.122, u32[1]{0:T(128)S(6)} %add.125), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<130 shift-left.127 @6>
+ positions:
+  shift-left.127
+ uses:
+  or.129, operand 0
+ from instruction: %shift-left.127 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %add.125, u32[1]{0:T(128)} %constant.17), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<131 shift-right-logical.128 @6>
+ positions:
+  shift-right-logical.128
+ uses:
+  or.129, operand 1
+ from instruction: %shift-right-logical.128 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %add.125, u32[1]{0:T(128)} %constant.16), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<132 or.129 @6>
+ positions:
+  or.129
+ uses:
+  xor.130, operand 1
+ from instruction: %or.129 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.127, u32[1]{0:T(128)S(6)} %shift-right-logical.128), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<133 xor.130 @6>
+ positions:
+  xor.130
+ uses:
+  add.131, operand 1
+  shift-left.132, operand 0
+  shift-right-logical.133, operand 0
+ from instruction: %xor.130 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.126, u32[1]{0:T(128)S(6)} %or.129), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<134 add.131 @6>
+ positions:
+  add.131
+ uses:
+  xor.135, operand 0
+  add.136, operand 0
+ from instruction: %add.131 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.126, u32[1]{0:T(128)S(6)} %xor.130), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<135 shift-left.132 @6>
+ positions:
+  shift-left.132
+ uses:
+  or.134, operand 0
+ from instruction: %shift-left.132 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.130, u32[1]{0:T(128)} %constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<136 shift-right-logical.133 @6>
+ positions:
+  shift-right-logical.133
+ uses:
+  or.134, operand 1
+ from instruction: %shift-right-logical.133 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.130, u32[1]{0:T(128)} %constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<137 or.134 @6>
+ positions:
+  or.134
+ uses:
+  xor.135, operand 1
+ from instruction: %or.134 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.132, u32[1]{0:T(128)S(6)} %shift-right-logical.133), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<138 xor.135 @6>
+ positions:
+  xor.135
+ uses:
+  add.136, operand 1
+  shift-left.137, operand 0
+  shift-right-logical.138, operand 0
+ from instruction: %xor.135 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.131, u32[1]{0:T(128)S(6)} %or.134), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<139 add.136 @6>
+ positions:
+  add.136
+ uses:
+  xor.140, operand 0
+  add.141, operand 0
+ from instruction: %add.136 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.131, u32[1]{0:T(128)S(6)} %xor.135), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<140 shift-left.137 @6>
+ positions:
+  shift-left.137
+ uses:
+  or.139, operand 0
+ from instruction: %shift-left.137 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.135, u32[1]{0:T(128)} %constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<141 shift-right-logical.138 @6>
+ positions:
+  shift-right-logical.138
+ uses:
+  or.139, operand 1
+ from instruction: %shift-right-logical.138 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.135, u32[1]{0:T(128)} %constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<142 or.139 @6>
+ positions:
+  or.139
+ uses:
+  xor.140, operand 1
+ from instruction: %or.139 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.137, u32[1]{0:T(128)S(6)} %shift-right-logical.138), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<143 xor.140 @6>
+ positions:
+  xor.140
+ uses:
+  add.141, operand 1
+  shift-left.142, operand 0
+  shift-right-logical.143, operand 0
+ from instruction: %xor.140 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.136, u32[1]{0:T(128)S(6)} %or.139), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<144 add.141 @6>
+ positions:
+  add.141
+ uses:
+  add.147, operand 0
+  xor.145, operand 0
+ from instruction: %add.141 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.136, u32[1]{0:T(128)S(6)} %xor.140), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<145 shift-left.142 @6>
+ positions:
+  shift-left.142
+ uses:
+  or.144, operand 0
+ from instruction: %shift-left.142 = u32[1]{0:T(128)S(6)} shift-left(u32[1]{0:T(128)S(6)} %xor.140, u32[1]{0:T(128)} %constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<146 shift-right-logical.143 @6>
+ positions:
+  shift-right-logical.143
+ uses:
+  or.144, operand 1
+ from instruction: %shift-right-logical.143 = u32[1]{0:T(128)S(6)} shift-right-logical(u32[1]{0:T(128)S(6)} %xor.140, u32[1]{0:T(128)} %constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<147 or.144 @6>
+ positions:
+  or.144
+ uses:
+  xor.145, operand 1
+ from instruction: %or.144 = u32[1]{0:T(128)S(6)} or(u32[1]{0:T(128)S(6)} %shift-left.142, u32[1]{0:T(128)S(6)} %shift-right-logical.143), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<148 xor.145 @6>
+ positions:
+  xor.145
+ uses:
+  add.148, operand 0
+ from instruction: %xor.145 = u32[1]{0:T(128)S(6)} xor(u32[1]{0:T(128)S(6)} %add.141, u32[1]{0:T(128)S(6)} %or.144), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<149 add.148 @6>
+ positions:
+  add.148
+ uses:
+  add.149, operand 0
+ from instruction: %add.148 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %xor.145, u32[1]{0:T(128)} %get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<150 constant.3 @0>
+ positions:
+  constant.3
+ uses:
+  add.149, operand 1
+ from instruction: %constant.3 = u32[1]{0:T(128)} constant({5})<151 add.149 @6>
+ positions:
+  add.149
+ uses:
+  fusion, operand 0
+ from instruction: %add.149 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.148, u32[1]{0:T(128)} %constant.3), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<152 add.147 @6>
+ positions:
+  add.147
+ uses:
+  fusion, operand 1
+ from instruction: %add.147 = u32[1]{0:T(128)S(6)} add(u32[1]{0:T(128)S(6)} %add.141, u32[1]{0:T(128)S(6)} %xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}<153 fusion @0>
+ positions:
+  fusion
+ uses:
+ from instruction: %fusion = u32[2]{0:T(128)} fusion(u32[1]{0:T(128)S(6)} %add.149, u32[1]{0:T(128)S(6)} %add.147), kind=kLoop, calls=%fused_computation, metadata={op_name="jit(_threefry_fold_in)/jit(main)/concatenate[dimension=0]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+
+HloLiveRange (max 146):
+  InstructionSequence:
+    0:constant
+    1:constant.19
+    2:constant.17
+    3:constant.16
+    4:constant.15
+    5:constant.14
+    6:constant.13
+    7:constant.12
+    8:constant.11
+    9:constant.10
+    10:constant.9
+    11:constant.8
+    12:constant.7
+    13:constant.6
+    14:constant.5
+    15:constant.4
+    16:constant.3
+    17:Arg_1.2
+    18:Arg_0.1
+    19:copy
+    20:shift-right-logical.20
+    21:fusion.1
+    22:get-tuple-element.1
+    23:bitcast
+    24:add.29
+    25:get-tuple-element
+    26:xor.0
+    27:xor.1
+    28:bitcast.2
+    29:add.30
+    30:shift-right-logical.33
+    31:shift-left.32
+    32:or.34
+    33:add.31
+    34:xor.35
+    35:shift-right-logical.38
+    36:shift-left.37
+    37:or.39
+    38:add.36
+    39:xor.40
+    40:shift-right-logical.43
+    41:shift-left.42
+    42:or.44
+    43:add.41
+    44:xor.45
+    45:shift-right-logical.48
+    46:shift-left.47
+    47:or.49
+    48:add.46
+    49:xor.50
+    50:add.53
+    51:add.54
+    52:shift-right-logical.57
+    53:shift-left.56
+    54:or.58
+    55:add.51
+    56:add.55
+    57:xor.59
+    58:shift-right-logical.62
+    59:shift-left.61
+    60:or.63
+    61:add.60
+    62:xor.64
+    63:shift-right-logical.67
+    64:shift-left.66
+    65:or.68
+    66:add.65
+    67:xor.69
+    68:shift-right-logical.72
+    69:shift-left.71
+    70:or.73
+    71:add.70
+    72:xor.74
+    73:add.77
+    74:add.78
+    75:shift-right-logical.81
+    76:shift-left.80
+    77:or.82
+    78:add.76
+    79:add.79
+    80:xor.83
+    81:shift-right-logical.86
+    82:shift-left.85
+    83:or.87
+    84:add.84
+    85:xor.88
+    86:shift-right-logical.91
+    87:shift-left.90
+    88:or.92
+    89:add.89
+    90:xor.93
+    91:shift-right-logical.96
+    92:shift-left.95
+    93:or.97
+    94:add.94
+    95:xor.98
+    96:add.100
+    97:add.101
+    98:shift-right-logical.104
+    99:shift-left.103
+    100:or.105
+    101:add.99
+    102:add.102
+    103:xor.106
+    104:shift-right-logical.109
+    105:shift-left.108
+    106:or.110
+    107:add.107
+    108:xor.111
+    109:shift-right-logical.114
+    110:shift-left.113
+    111:or.115
+    112:add.112
+    113:xor.116
+    114:shift-right-logical.119
+    115:shift-left.118
+    116:or.120
+    117:add.117
+    118:xor.121
+    119:add.124
+    120:add.125
+    121:shift-right-logical.128
+    122:shift-left.127
+    123:or.129
+    124:add.122
+    125:add.126
+    126:xor.130
+    127:shift-right-logical.133
+    128:shift-left.132
+    129:or.134
+    130:add.131
+    131:xor.135
+    132:shift-right-logical.138
+    133:shift-left.137
+    134:or.139
+    135:add.136
+    136:xor.140
+    137:shift-right-logical.143
+    138:shift-left.142
+    139:or.144
+    140:add.141
+    141:xor.145
+    142:add.148
+    143:add.149
+    144:add.147
+    145:fusion
+  BufferLiveRange:
+    Arg_1.2{}:0-146
+    copy{}:19-29
+    constant.19{}:1-20
+    shift-right-logical.20{}:20-24
+    Arg_0.1{}:0-146
+    fusion.1{}:21-25
+    fusion.1{0}:21-124
+    fusion.1{1}:21-142
+    add.29{}:24-33
+    add.30{}:29-33
+    add.31{}:33-38
+    constant.17{}:2-122
+    shift-left.32{}:31-32
+    constant.16{}:3-121
+    shift-right-logical.33{}:30-32
+    or.34{}:32-34
+    xor.35{}:34-38
+    add.36{}:38-43
+    constant.15{}:4-128
+    shift-left.37{}:36-37
+    constant.14{}:5-127
+    shift-right-logical.38{}:35-37
+    or.39{}:37-39
+    xor.40{}:39-43
+    add.41{}:43-48
+    constant.13{}:6-137
+    shift-left.42{}:41-42
+    constant.12{}:7-138
+    shift-right-logical.43{}:40-42
+    or.44{}:42-44
+    xor.45{}:44-48
+    add.46{}:48-55
+    add.51{}:55-56
+    shift-left.47{}:46-47
+    shift-right-logical.48{}:45-47
+    or.49{}:47-49
+    xor.50{}:49-50
+    xor.0{}:26-27
+    constant{}:0-27
+    xor.1{}:27-144
+    add.53{}:50-51
+    constant.11{}:8-51
+    add.54{}:51-56
+    add.55{}:56-61
+    shift-left.56{}:53-54
+    shift-right-logical.57{}:52-54
+    or.58{}:54-57
+    xor.59{}:57-61
+    add.60{}:61-66
+    constant.10{}:9-105
+    shift-left.61{}:59-60
+    constant.9{}:10-104
+    shift-right-logical.62{}:58-60
+    or.63{}:60-62
+    xor.64{}:62-66
+    add.65{}:66-71
+    constant.8{}:11-110
+    shift-left.66{}:64-65
+    shift-right-logical.67{}:63-65
+    or.68{}:65-67
+    xor.69{}:67-71
+    add.70{}:71-78
+    add.76{}:78-79
+    constant.7{}:12-115
+    shift-left.71{}:69-70
+    constant.6{}:13-114
+    shift-right-logical.72{}:68-70
+    or.73{}:70-72
+    xor.74{}:72-73
+    add.77{}:73-74
+    constant.5{}:14-74
+    add.78{}:74-79
+    add.79{}:79-84
+    shift-left.80{}:76-77
+    shift-right-logical.81{}:75-77
+    or.82{}:77-80
+    xor.83{}:80-84
+    add.84{}:84-89
+    shift-left.85{}:82-83
+    shift-right-logical.86{}:81-83
+    or.87{}:83-85
+    xor.88{}:85-89
+    add.89{}:89-94
+    shift-left.90{}:87-88
+    shift-right-logical.91{}:86-88
+    or.92{}:88-90
+    xor.93{}:90-94
+    add.94{}:94-101
+    add.99{}:101-102
+    shift-left.95{}:92-93
+    shift-right-logical.96{}:91-93
+    or.97{}:93-95
+    xor.98{}:95-96
+    add.100{}:96-97
+    add.101{}:97-102
+    add.102{}:102-107
+    shift-left.103{}:99-100
+    shift-right-logical.104{}:98-100
+    or.105{}:100-103
+    xor.106{}:103-107
+    add.107{}:107-112
+    shift-left.108{}:105-106
+    shift-right-logical.109{}:104-106
+    or.110{}:106-108
+    xor.111{}:108-112
+    add.112{}:112-117
+    shift-left.113{}:110-111
+    shift-right-logical.114{}:109-111
+    or.115{}:111-113
+    xor.116{}:113-117
+    add.117{}:117-124
+    add.122{}:124-125
+    shift-left.118{}:115-116
+    shift-right-logical.119{}:114-116
+    or.120{}:116-118
+    xor.121{}:118-119
+    add.124{}:119-120
+    constant.4{}:15-120
+    add.125{}:120-125
+    add.126{}:125-130
+    shift-left.127{}:122-123
+    shift-right-logical.128{}:121-123
+    or.129{}:123-126
+    xor.130{}:126-130
+    add.131{}:130-135
+    shift-left.132{}:128-129
+    shift-right-logical.133{}:127-129
+    or.134{}:129-131
+    xor.135{}:131-135
+    add.136{}:135-140
+    shift-left.137{}:133-134
+    shift-right-logical.138{}:132-134
+    or.139{}:134-136
+    xor.140{}:136-140
+    add.141{}:140-144
+    shift-left.142{}:138-139
+    shift-right-logical.143{}:137-139
+    or.144{}:139-141
+    xor.145{}:141-142
+    add.148{}:142-143
+    constant.3{}:16-143
+    add.149{}:143-145
+    add.147{}:144-145
+    fusion{}:145-146
+  Live ranges at 21 (peak):
+    Arg_1.2: 4 bytes
+    copy: 4 bytes
+    shift-right-logical.20: 4 bytes
+    Arg_0.1: 8 bytes
+    fusion.1: 16 bytes
+    fusion.1: 16 bytes
+    fusion.1: 16 bytes
+    constant.17: 4 bytes
+    constant.16: 4 bytes
+    constant.15: 4 bytes
+    constant.14: 4 bytes
+    constant.13: 4 bytes
+    constant.12: 4 bytes
+    constant: 4 bytes
+    constant.11: 4 bytes
+    constant.10: 4 bytes
+    constant.9: 4 bytes
+    constant.8: 4 bytes
+    constant.7: 4 bytes
+    constant.6: 4 bytes
+    constant.5: 4 bytes
+    constant.4: 4 bytes
+    constant.3: 4 bytes

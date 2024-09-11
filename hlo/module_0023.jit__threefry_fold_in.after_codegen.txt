@@ -1,0 +1,167 @@
+HloModule jit__threefry_fold_in, is_scheduled=true, entry_computation_layout={(u32[2]{0:T(128)}, u32[]{:T(128)})->u32[2]{0:T(128)}}, allow_spmd_sharding_propagation_to_parameters={true,true}, allow_spmd_sharding_propagation_to_output={true}
+
+fused_computation {
+  param_1.3 = u32[1]{0:T(128)S(6)} parameter(1)
+  constant.2 = u32[]{:T(128)} constant(0)
+  pad.3 = u32[2]{0:T(128)} pad(param_1.3, constant.2), padding=0_1, metadata={op_name="jit(_threefry_fold_in)/jit(main)/concatenate[dimension=0]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  param_0.1 = u32[1]{0:T(128)S(6)} parameter(0)
+  pad.2 = u32[2]{0:T(128)} pad(param_0.1, constant.2), padding=1_0, metadata={op_name="jit(_threefry_fold_in)/jit(main)/concatenate[dimension=0]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  ROOT add.1 = u32[2]{0:T(128)} add(pad.3, pad.2), metadata={op_name="jit(_threefry_fold_in)/jit(main)/concatenate[dimension=0]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+} // fused_computation
+
+fused_computation.1 {
+  param_0.2 = u32[2]{0:T(128)} parameter(0)
+  slice.0 = u32[1]{0:T(128)} slice(param_0.2), slice={[1:2]}, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(1,) limit_indices=(2,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  slice.1 = u32[1]{0:T(128)} slice(param_0.2), slice={[0:1]}, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(0,) limit_indices=(1,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  ROOT tuple = (u32[1]{0:T(128)}, u32[1]{0:T(128)}) tuple(slice.0, slice.1)
+}
+
+ENTRY main.151 {
+  constant = u32[1]{0:T(128)} constant({466688986})
+  constant.19 = u32[]{:T(128)} constant(32)
+  constant.17 = u32[1]{0:T(128)} constant({13})
+  constant.16 = u32[1]{0:T(128)} constant({19})
+  constant.15 = u32[1]{0:T(128)} constant({15})
+  constant.14 = u32[1]{0:T(128)} constant({17})
+  constant.13 = u32[1]{0:T(128)} constant({26})
+  constant.12 = u32[1]{0:T(128)} constant({6})
+  constant.11 = u32[1]{0:T(128)} constant({1})
+  constant.10 = u32[1]{0:T(128)} constant({29})
+  constant.9 = u32[1]{0:T(128)} constant({3})
+  constant.8 = u32[1]{0:T(128)} constant({16})
+  constant.7 = u32[1]{0:T(128)} constant({24})
+  constant.6 = u32[1]{0:T(128)} constant({8})
+  constant.5 = u32[1]{0:T(128)} constant({2})
+  constant.4 = u32[1]{0:T(128)} constant({4})
+  constant.3 = u32[1]{0:T(128)} constant({5})
+  Arg_1.2 = u32[]{:T(128)} parameter(1), metadata={op_name="data"}
+  Arg_0.1 = u32[2]{0:T(128)} parameter(0), metadata={op_name="key"}
+  copy = u32[]{:T(128)} copy(Arg_1.2)
+  shift-right-logical.20 = u32[]{:T(128)} shift-right-logical(copy, constant.19), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  fusion.1 = (u32[1]{0:T(128)}, u32[1]{0:T(128)}) fusion(Arg_0.1), kind=kLoop, calls=fused_computation.1, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(1,) limit_indices=(2,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}, backend_config={"flag_configs":[],"window_config":{"kernel_window_bounds":[],"output_window_bounds":["1"],"input_window_bounds":[],"estimated_cycles":"2124","iteration_bounds":["1"]},"scoped_memory_configs":[],"used_scoped_memory_configs":[{"memory_space":"1","offset":"0","size":"4096"}],"retry_config":{"retry_count":"0"}}
+  get-tuple-element.1 = u32[1]{0:T(128)} get-tuple-element(fusion.1), index=1, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(1,) limit_indices=(2,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  bitcast = u32[1]{0:T(128)} bitcast(shift-right-logical.20), metadata={op_name="jit(_threefry_fold_in)/jit(main)/broadcast_in_dim[shape=(1,) broadcast_dimensions=()]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.29 = u32[1]{0:T(128)S(6)} add(bitcast, get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  get-tuple-element = u32[1]{0:T(128)} get-tuple-element(fusion.1), index=0, metadata={op_name="jit(_threefry_fold_in)/jit(main)/slice[start_indices=(1,) limit_indices=(2,) strides=(1,)]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.0 = u32[1]{0:T(128)S(6)} xor(get-tuple-element.1, get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.1 = u32[1]{0:T(128)S(6)} xor(xor.0, constant), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  bitcast.2 = u32[1]{0:T(128)} bitcast(copy)
+  add.30 = u32[1]{0:T(128)S(6)} add(bitcast.2, get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.33 = u32[1]{0:T(128)S(6)} shift-right-logical(add.30, constant.16), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.32 = u32[1]{0:T(128)S(6)} shift-left(add.30, constant.17), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.34 = u32[1]{0:T(128)S(6)} or(shift-left.32, shift-right-logical.33), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.31 = u32[1]{0:T(128)S(6)} add(add.29, add.30), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.35 = u32[1]{0:T(128)S(6)} xor(add.31, or.34), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.38 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.35, constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.37 = u32[1]{0:T(128)S(6)} shift-left(xor.35, constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.39 = u32[1]{0:T(128)S(6)} or(shift-left.37, shift-right-logical.38), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.36 = u32[1]{0:T(128)S(6)} add(add.31, xor.35), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.40 = u32[1]{0:T(128)S(6)} xor(add.36, or.39), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.43 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.40, constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.42 = u32[1]{0:T(128)S(6)} shift-left(xor.40, constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.44 = u32[1]{0:T(128)S(6)} or(shift-left.42, shift-right-logical.43), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.41 = u32[1]{0:T(128)S(6)} add(add.36, xor.40), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.45 = u32[1]{0:T(128)S(6)} xor(add.41, or.44), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.48 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.45, constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.47 = u32[1]{0:T(128)S(6)} shift-left(xor.45, constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.49 = u32[1]{0:T(128)S(6)} or(shift-left.47, shift-right-logical.48), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.46 = u32[1]{0:T(128)S(6)} add(add.41, xor.45), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.50 = u32[1]{0:T(128)S(6)} xor(add.46, or.49), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.53 = u32[1]{0:T(128)S(6)} add(xor.50, xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.54 = u32[1]{0:T(128)S(6)} add(add.53, constant.11), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.57 = u32[1]{0:T(128)S(6)} shift-right-logical(add.54, constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.56 = u32[1]{0:T(128)S(6)} shift-left(add.54, constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.58 = u32[1]{0:T(128)S(6)} or(shift-left.56, shift-right-logical.57), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.51 = u32[1]{0:T(128)S(6)} add(add.46, get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.55 = u32[1]{0:T(128)S(6)} add(add.51, add.54), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.59 = u32[1]{0:T(128)S(6)} xor(add.55, or.58), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.62 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.59, constant.9), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.61 = u32[1]{0:T(128)S(6)} shift-left(xor.59, constant.10), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.63 = u32[1]{0:T(128)S(6)} or(shift-left.61, shift-right-logical.62), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.60 = u32[1]{0:T(128)S(6)} add(add.55, xor.59), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.64 = u32[1]{0:T(128)S(6)} xor(add.60, or.63), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.67 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.64, constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.66 = u32[1]{0:T(128)S(6)} shift-left(xor.64, constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.68 = u32[1]{0:T(128)S(6)} or(shift-left.66, shift-right-logical.67), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.65 = u32[1]{0:T(128)S(6)} add(add.60, xor.64), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.69 = u32[1]{0:T(128)S(6)} xor(add.65, or.68), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.72 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.69, constant.6), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.71 = u32[1]{0:T(128)S(6)} shift-left(xor.69, constant.7), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.73 = u32[1]{0:T(128)S(6)} or(shift-left.71, shift-right-logical.72), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.70 = u32[1]{0:T(128)S(6)} add(add.65, xor.69), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.74 = u32[1]{0:T(128)S(6)} xor(add.70, or.73), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.77 = u32[1]{0:T(128)S(6)} add(xor.74, get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.78 = u32[1]{0:T(128)S(6)} add(add.77, constant.5), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.81 = u32[1]{0:T(128)S(6)} shift-right-logical(add.78, constant.16), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.80 = u32[1]{0:T(128)S(6)} shift-left(add.78, constant.17), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.82 = u32[1]{0:T(128)S(6)} or(shift-left.80, shift-right-logical.81), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.76 = u32[1]{0:T(128)S(6)} add(add.70, xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.79 = u32[1]{0:T(128)S(6)} add(add.76, add.78), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.83 = u32[1]{0:T(128)S(6)} xor(add.79, or.82), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.86 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.83, constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.85 = u32[1]{0:T(128)S(6)} shift-left(xor.83, constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.87 = u32[1]{0:T(128)S(6)} or(shift-left.85, shift-right-logical.86), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.84 = u32[1]{0:T(128)S(6)} add(add.79, xor.83), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.88 = u32[1]{0:T(128)S(6)} xor(add.84, or.87), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.91 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.88, constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.90 = u32[1]{0:T(128)S(6)} shift-left(xor.88, constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.92 = u32[1]{0:T(128)S(6)} or(shift-left.90, shift-right-logical.91), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.89 = u32[1]{0:T(128)S(6)} add(add.84, xor.88), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.93 = u32[1]{0:T(128)S(6)} xor(add.89, or.92), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.96 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.93, constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.95 = u32[1]{0:T(128)S(6)} shift-left(xor.93, constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.97 = u32[1]{0:T(128)S(6)} or(shift-left.95, shift-right-logical.96), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.94 = u32[1]{0:T(128)S(6)} add(add.89, xor.93), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.98 = u32[1]{0:T(128)S(6)} xor(add.94, or.97), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.100 = u32[1]{0:T(128)S(6)} add(xor.98, get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.101 = u32[1]{0:T(128)S(6)} add(add.100, constant.9), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.104 = u32[1]{0:T(128)S(6)} shift-right-logical(add.101, constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.103 = u32[1]{0:T(128)S(6)} shift-left(add.101, constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.105 = u32[1]{0:T(128)S(6)} or(shift-left.103, shift-right-logical.104), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.99 = u32[1]{0:T(128)S(6)} add(add.94, get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.102 = u32[1]{0:T(128)S(6)} add(add.99, add.101), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.106 = u32[1]{0:T(128)S(6)} xor(add.102, or.105), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.109 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.106, constant.9), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.108 = u32[1]{0:T(128)S(6)} shift-left(xor.106, constant.10), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.110 = u32[1]{0:T(128)S(6)} or(shift-left.108, shift-right-logical.109), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.107 = u32[1]{0:T(128)S(6)} add(add.102, xor.106), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.111 = u32[1]{0:T(128)S(6)} xor(add.107, or.110), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.114 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.111, constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.113 = u32[1]{0:T(128)S(6)} shift-left(xor.111, constant.8), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.115 = u32[1]{0:T(128)S(6)} or(shift-left.113, shift-right-logical.114), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.112 = u32[1]{0:T(128)S(6)} add(add.107, xor.111), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.116 = u32[1]{0:T(128)S(6)} xor(add.112, or.115), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.119 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.116, constant.6), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.118 = u32[1]{0:T(128)S(6)} shift-left(xor.116, constant.7), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.120 = u32[1]{0:T(128)S(6)} or(shift-left.118, shift-right-logical.119), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.117 = u32[1]{0:T(128)S(6)} add(add.112, xor.116), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.121 = u32[1]{0:T(128)S(6)} xor(add.117, or.120), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.124 = u32[1]{0:T(128)S(6)} add(xor.121, xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.125 = u32[1]{0:T(128)S(6)} add(add.124, constant.4), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.128 = u32[1]{0:T(128)S(6)} shift-right-logical(add.125, constant.16), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.127 = u32[1]{0:T(128)S(6)} shift-left(add.125, constant.17), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.129 = u32[1]{0:T(128)S(6)} or(shift-left.127, shift-right-logical.128), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.122 = u32[1]{0:T(128)S(6)} add(add.117, get-tuple-element), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.126 = u32[1]{0:T(128)S(6)} add(add.122, add.125), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.130 = u32[1]{0:T(128)S(6)} xor(add.126, or.129), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.133 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.130, constant.14), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.132 = u32[1]{0:T(128)S(6)} shift-left(xor.130, constant.15), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.134 = u32[1]{0:T(128)S(6)} or(shift-left.132, shift-right-logical.133), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.131 = u32[1]{0:T(128)S(6)} add(add.126, xor.130), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.135 = u32[1]{0:T(128)S(6)} xor(add.131, or.134), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.138 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.135, constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.137 = u32[1]{0:T(128)S(6)} shift-left(xor.135, constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.139 = u32[1]{0:T(128)S(6)} or(shift-left.137, shift-right-logical.138), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.136 = u32[1]{0:T(128)S(6)} add(add.131, xor.135), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.140 = u32[1]{0:T(128)S(6)} xor(add.136, or.139), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-right-logical.143 = u32[1]{0:T(128)S(6)} shift-right-logical(xor.140, constant.13), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_right_logical" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  shift-left.142 = u32[1]{0:T(128)S(6)} shift-left(xor.140, constant.12), metadata={op_name="jit(_threefry_fold_in)/jit(main)/shift_left" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  or.144 = u32[1]{0:T(128)S(6)} or(shift-left.142, shift-right-logical.143), metadata={op_name="jit(_threefry_fold_in)/jit(main)/or" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.141 = u32[1]{0:T(128)S(6)} add(add.136, xor.140), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  xor.145 = u32[1]{0:T(128)S(6)} xor(add.141, or.144), metadata={op_name="jit(_threefry_fold_in)/jit(main)/xor" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.148 = u32[1]{0:T(128)S(6)} add(xor.145, get-tuple-element.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.149 = u32[1]{0:T(128)S(6)} add(add.148, constant.3), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  add.147 = u32[1]{0:T(128)S(6)} add(add.141, xor.1), metadata={op_name="jit(_threefry_fold_in)/jit(main)/add" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}
+  ROOT fusion = u32[2]{0:T(128)} fusion(add.149, add.147), kind=kLoop, calls=fused_computation, metadata={op_name="jit(_threefry_fold_in)/jit(main)/concatenate[dimension=0]" source_file="/home/liyanglu/.local/lib/python3.10/site-packages/flax/core/scope.py" source_line=164}, backend_config={"flag_configs":[],"window_config":{"kernel_window_bounds":[],"output_window_bounds":["1"],"input_window_bounds":[],"estimated_cycles":"2124","iteration_bounds":["1"]},"scoped_memory_configs":[],"used_scoped_memory_configs":[{"memory_space":"1","offset":"0","size":"1024"}],"retry_config":{"retry_count":"0"}}
+} // main.151
+
